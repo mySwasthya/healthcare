@@ -12,11 +12,11 @@ class Carousel extends Component {
                     <Button size="lg" className="button2">Visit Pharmacy Store</Button>
                 </div>
                 <ul class="slideshow">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
                 </ul>
             </div>
         );

@@ -1,9 +1,13 @@
 * {
     font-family: 'Poppins',sans-serif;
 }
+.vert-align {
+  margin-top: 12.5vh;
+} 
 .navbar {
   background-color: #31bbee;
   padding: 24px 0;
+  height: 12.5vh;
 }
 .navbar .navbar-brand, .navbar ul li a {
   color:white;
@@ -100,7 +104,7 @@
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
-    animation: imageAnimation 50s linear infinite; 
+    animation: imageAnimation 25s linear infinite; 
 }
 .slideshow li:nth-child(1) { 
     background: url('/assets/images/main1.jpg') rgb(150, 149, 149);
@@ -111,25 +115,25 @@
     background: url('/assets/images/main2.jpg') rgb(150, 149, 149);
     background-size:cover;
     background-blend-mode: multiply;
-    animation-delay: 10s; 
+    animation-delay: 5s; 
   }
   .slideshow li:nth-child(3) { 
     background: url('/assets/images/main3.jpg') rgb(150, 149, 149);
     background-size:cover;
     background-blend-mode: multiply;
-    animation-delay: 20s; 
+    animation-delay: 10s; 
   }
   .slideshow li:nth-child(4) { 
     background: url('/assets/images/main4.jpg') rgb(150, 149, 149);
     background-size:cover;
     background-blend-mode: multiply;
-    animation-delay: 30s; 
+    animation-delay: 15s; 
   }
   .slideshow li:nth-child(5) { 
     background: url('/assets/images/main5.jpg') rgb(150, 149, 149);
     background-size:cover;
     background-blend-mode: multiply;
-    animation-delay: 40s; 
+    animation-delay: 20s; 
 }
 @keyframes imageAnimation { 
     0% { 
@@ -150,13 +154,6 @@
 /* Older browser support - .no-cssanimations class added by modernizr */
 .no-cssanimations .slideshow li {
 	opacity: 1;
-}
-
-@media (max-width: 768px) {
-  .jumbotron h1, p {
-    margin-left: 0;
-    
-  }
 }
 
 
