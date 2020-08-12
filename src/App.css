@@ -4,6 +4,8 @@
 .vert-align {
   margin-top: 12.5vh;
 } 
+
+/* Navbar */
 .navbar {
   background-color: #31bbee;
   padding: 24px 0;
@@ -64,6 +66,17 @@
   background-color: #31bbee;
   border-radius: 0;
 }
+#landing-header .button1 a {
+  text-decoration: none;
+  color: #fafafa;
+}
+#landing-header .button1:hover{
+  border: 1px solid #31bbee;
+  background-color: #fafafa;
+}
+#landing-header .button1:hover a {
+  color: #31bbee;
+}
 #landing-header .button2 {
   margin-top: 3%;
   margin-right: 32px;
@@ -72,15 +85,16 @@
   background-color: #fafafa;
    border-radius: 0;
 }
-#landing-header .button1:hover{
+#landing-header .button2 a {
+  text-decoration: none;
   color: #31bbee;
-  border: 1px solid #31bbee;
-  background-color: #fafafa;
 }
 #landing-header .button2:hover{
-  color: #fafafa;
   border: 1px solid #fafafa;
   background-color: #31bbee;
+}
+#landing-header .button2:hover a {
+  color: #fafafa;
 }
 .slideshow { 
     position: fixed;
@@ -107,29 +121,34 @@
     animation: imageAnimation 25s linear infinite; 
 }
 .slideshow li:nth-child(1) { 
+    min-height: 100%;
     background: url('/assets/images/main1.jpg') rgb(150, 149, 149);
     background-size:cover;
     background-blend-mode: multiply;
   }
   .slideshow li:nth-child(2) { 
+    min-height: 100%;
     background: url('/assets/images/main2.jpg') rgb(150, 149, 149);
     background-size:cover;
     background-blend-mode: multiply;
     animation-delay: 5s; 
   }
   .slideshow li:nth-child(3) { 
+    min-height: 100%;
     background: url('/assets/images/main3.jpg') rgb(150, 149, 149);
     background-size:cover;
     background-blend-mode: multiply;
     animation-delay: 10s; 
   }
   .slideshow li:nth-child(4) { 
+    min-height: 100%;
     background: url('/assets/images/main4.jpg') rgb(150, 149, 149);
     background-size:cover;
     background-blend-mode: multiply;
     animation-delay: 15s; 
   }
   .slideshow li:nth-child(5) { 
+    min-height: 100%;
     background: url('/assets/images/main5.jpg') rgb(150, 149, 149);
     background-size:cover;
     background-blend-mode: multiply;
@@ -156,9 +175,44 @@
 	opacity: 1;
 }
 
-
+/* Footer */
 .footer {
   background-color: #fafafa;
   margin-top: 2rem;
 }
 
+/* Home */
+.img-home {
+  max-height: 500px;
+  width: 100%;
+}
+.card-space {
+  margin: 5% 2%;
+  display: flex;
+  justify-content: space-around;
+}
+.card {
+  overflow: hidden;
+}
+.card-img-top {
+  transition: transform 0.8s;
+}
+.card:hover .card-img-top {
+  transform: scale(1.15);
+  opacity: 0.8;
+}
+.card button {
+  background-color: #31bbee;
+  border: 1px solid #31bbee;
+}
+.card button a {
+  color: #fafafa;
+  text-decoration: none;
+}
+.card button:hover {
+  background-color: #fafafa;
+  border: 1px solid #31bbee;
+}
+.card button:hover a {
+  color: #31bbee;
+}
