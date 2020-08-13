@@ -3,6 +3,7 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
         Button, Modal, ModalHeader, ModalBody,
         Form, FormGroup, Input,  Label  } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import Signup from './UsersignupComponent';
 
 class Header extends Component  {
 
@@ -58,9 +59,11 @@ class Header extends Component  {
                     <Button onClick={this.toggleModal}>
                       <span className="fa fa-sign-in fa-lg"></span> Login
                     </Button>
+                    <NavLink className="nav-link" to="/signup">
                     <Button onClick={this.toggleModal}>
                       <span className="fa fa-user-plus fa-lg"></span> Sign Up
                     </Button>
+                    </NavLink>
                   </NavItem>
                 </Nav>
               </Collapse>
@@ -69,6 +72,6 @@ class Header extends Component  {
         </>
       );
     }
-  }  
+  }
 
  export default Header;
