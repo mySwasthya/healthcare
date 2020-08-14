@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Footer from "./FooterComponent";
+
 class Contact extends Component {
   render() {
     return (

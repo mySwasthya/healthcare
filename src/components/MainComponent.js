@@ -6,6 +6,7 @@ import Home from './Home';
 import Contact from './Contact';
 import About from './AboutComponent';
 import Signup from './UsersignupComponent';
+import Services from './Services';
 
 class Main extends Component {
   render() {
@@ -15,10 +16,11 @@ class Main extends Component {
         <Switch>
             <Route exact path="/" component={Carousel} />
             <Route exact path="/home" component={Home} />
+            <Route exact path="/aboutus" component={About} />
+            <Route exact path="/services" component={Services} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/" component={Main} />
             <Route path="/signup" component={Signup} />
-            <Route exact path="/aboutus" component={About} />
             <Redirect to="/" />
         </Switch>
       </div>
