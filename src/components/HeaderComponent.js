@@ -1,23 +1,6 @@
 import React, { Component } from "react";
-import {
-  Navbar,
-  NavbarBrand,
-  Nav,
-  NavbarToggler,
-  Collapse,
-  NavItem,
-  Jumbotron,
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  Form,
-  FormGroup,
-  Input,
-  Label,
-} from "reactstrap";
+import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Button } from "reactstrap";
 import { NavLink } from "react-router-dom";
-import Signup from "./UsersignupComponent";
 
 class Header extends Component {
   constructor(props) {

@@ -205,17 +205,87 @@
   width: 100%;
 }
 .img-home:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .img-home #landing-header {
   padding-top: 30vh;
 }
+
+.home-section {
+  margin: 3% 7.5%;
+  text-align: center;
+}
+.home-section-back {
+  margin: 5% 0;
+  padding: 5% 5%;
+  text-align: center;
+  color: #fafafa;
+  background: linear-gradient(to right, #4e4376, #2b5876);
+}
+.home-section i {
+  color: #04a4d4;
+}
+.home-header {
+  font-size: 4em;
+  font-weight: 600;
+}
+.home-section hr {
+  width: 50px;
+  height: 3px;
+  margin: 8px auto;
+  background-color: #04a4d4;
+  transition: width 1s linear;
+}
+.home-head:hover hr {
+  width: 300px;
+} 
+.home-content {
+  margin-top: 32px;
+}
+.home-content p {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.8;
+}
+.img-height {
+  min-height: 100%;
+}
+@media (max-width: 991.98px) { 
+  .home-content p {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 1199.98px) {
+  .home-content p {
+    font-size: 1em;
+  }
+}
+.icons {
+  margin: 0% 5%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.icons div {
+  margin: 2.5% 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+.icons div i {
+  color: white;
+}
+.icons div:hover i {
+  transition: 1s ease-in;
+  color: #04a4d4;
+  transform: rotate(360deg);
+}
+
 .card-space {
-  margin: 5% 2%;
-  display: flex;
-  justify-content: space-around;
+  margin: 0 5%;;
 }
 .card {
+  margin: 10% 5%;  
   overflow: hidden;
   box-shadow: 0 8px 6px -6px black;
 }
@@ -228,11 +298,15 @@
 }
 .card-title {
   font-size: 1.25em;
+  font-family: 'Times New Roman', Times, serif;
+}
+.card-text {
+  font-family: 'Times New Roman', Times, serif;
 }
 .card-subtitle {
   font-family: Oxygen, sans-serif;
   color: #999;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 50px;
 }
 .card button {
@@ -276,6 +350,7 @@
   padding-top: 5vh;
   color: white;
   font-size: 1.2em;
+  font-family: 'Times New Roman', Times, serif;
 }
 .home-bottom-content hr {
   height: 1px;
@@ -292,12 +367,14 @@
   border-radius: 0;
   border: 0;
   display: inline-block;
-  width: 250px;
+  width:250px;
+  font-family: 'Times New Roman', Times, serif;
 }
 .email-button {
   border-radius: 0;
   display: inline-block;
   width: 80px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .section1 {
