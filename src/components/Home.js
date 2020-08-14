@@ -33,7 +33,7 @@ function Home() {
             <h1>Let's do it together</h1>
             <p>We Believe Everyone Should Have Easy Access To Health Care</p>
             <Button size="lg" className="button1">
-              <Link to="/">Healthy Lifestyle</Link>
+              <Link to="/health">Healthy Lifestyle</Link>
             </Button>
           </div>
         </div>
