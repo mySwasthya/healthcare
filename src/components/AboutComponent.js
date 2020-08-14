@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Footer from "./FooterComponent";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -34,6 +35,7 @@ function About() {
         </p>
         <hr className="hr-style" />
       </div>
+      <Footer />
     </div>
   );
 }

@@ -55,18 +55,18 @@ function Footer(props) {
         <div id="e">
           <p>@ Copyright 2020 - Swasthya. All rights reserved</p>
           <div className="text-center">
-            <a href="http://google.com/+">
-              <i className="fa fa-google-plus"></i>
+            <a href="http://instagram.com" target="_blank">
+              <i className="fa fa-instagram"></i>
             </a>
-            <a href="http://www.facebook.com/profile.php?id=">
+            <a href="http://www.facebook.com/profile.php?id=" target="_blank">
               <i className="fa fa-facebook"></i>
             </a>
-            <a href="http://www.linkedin.com/in/">
+            <a href="http://www.linkedin.com/in/" target="_blank">
               <i className="fa fa-linkedin"></i>
             </a>
-            <a href="http://twitter.com/">
+            {/* <a href="http://twitter.com/ target="_blank"">
               <i className="fa fa-twitter"></i>
-            </a>
+            </a> */}
             <a href="mailto:">
               <i className="fa fa-envelope-o"></i>
             </a>
