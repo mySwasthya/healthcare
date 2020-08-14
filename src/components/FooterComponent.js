@@ -43,13 +43,13 @@ function Footer(props) {
         <div>
           <h2>Address</h2>
           <p>
-            <i class="fa fa-home"></i> Shri Mata Vaishno Devi University
+            <i className="fa fa-home"></i> Shri Mata Vaishno Devi University
           </p>
           <p>
-            <i class="fa fa-envelope"></i> myswasthya@gmail.com
+            <i className="fa fa-envelope"></i> myswasthya@gmail.com
           </p>
           <p>
-            <i class="fa fa-phone"></i> 0120-420-0420
+            <i className="fa fa-phone"></i> 0120-420-0420
           </p>
         </div>
         <div id="e">

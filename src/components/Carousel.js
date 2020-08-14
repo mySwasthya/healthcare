@@ -21,7 +21,7 @@ class Carousel extends Component {
                 <Link to="">Visit Pharmacy Store</Link>
               </Button>
             </div>
-            <ul class="slideshow">
+            <ul className="slideshow">
               <li></li>
               <li></li>
               <li></li>

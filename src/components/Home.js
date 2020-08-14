@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import Footer from "./FooterComponent";
 
 const RenderCard = () => {
     return (
@@ -68,15 +69,16 @@ function Home() {
                     <div className="form-wrapper">
                         <form className="form-inline text-center">
                             <div className="form-group">
-                                <label for="email" class="sr-only">Password</label>
-                                <input type="email" class="form-control email-field" id="email" placeholder="Enter your email address"></input>
+                                <label htmlFor="email" className="sr-only">Password</label>
+                                <input type="email" className="form-control email-field" id="email" placeholder="Enter your email address"></input>
                             </div>
-                            <button type="submit" class="btn btn-primary email-button">Submit</button>
+                            <button type="submit" className="btn btn-primary email-button">Submit</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+        <Footer />
       </div>
     );
 }
