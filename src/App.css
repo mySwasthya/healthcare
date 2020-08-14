@@ -4,6 +4,7 @@
   font-family: "Dosis", sans-serif;
   box-sizing: border-box;
 }
+
 .vert-align {
   margin-top: 12.5vh;
 } 
@@ -14,6 +15,7 @@
   padding: 24px 0;
   height: 12.5vh;
 }
+
 .navbar .navbar-brand,
 .navbar ul li a {
   color: white;
@@ -419,12 +421,35 @@ background: linear-gradient(#e73827, #dd2808);
 }
 
 .about-container {
-  background: #cb2d3e;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #ef473a, #cb2d3e);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #ef473a, #cb2d3e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #2C3E50;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #fff;
   padding: 1.5rem;
+}
 
+.card {
+  background-color: #000000;
+}
+
+
+
+iframe {
+  margin-top: 2rem;
+  width: 50%;
+  height: 300px;
+}
+
+.h4-style {
+  color: #000000;
+}
+.circular {
+  width: 110px;
+  height: 110px;
+  border-style:double;
+  border-radius: 50%;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
 }
 
 .hr-style {
@@ -437,4 +462,5 @@ background: linear-gradient(to bottom, #ef473a, #cb2d3e); /* W3C, IE 10+/ Edge, 
   .health-quote {
     margin-left: 0%;
   }
+
 }
