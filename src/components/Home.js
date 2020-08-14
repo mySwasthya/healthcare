@@ -6,7 +6,7 @@ import Footer from "./FooterComponent";
 const RenderCard = () => {
     return (
       <Card>
-        <CardImg top width="100%" src="/assets/images/card.jpg" alt="Card Img" />
+        <CardImg top width="100%" src="/assets/images/Card.jpg" alt="Card Img" />
         <CardBody>
           <CardTitle>Card Title</CardTitle>
           <CardText>
