@@ -584,7 +584,7 @@
   }
 }
 
-<<<<<<< HEAD
+/*..............about.............*/
 .about-container {
   background: #2C3E50;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to bottom, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
@@ -597,12 +597,16 @@ background: linear-gradient(to bottom, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, 
   background-color: #000000;
 }
 
-
-
 iframe {
   margin-top: 2rem;
   width: 50%;
   height: 300px;
+} 
+
+@media (max-width: 576px) {
+  iframe {
+    width: 100%;
+  }
 }
 
 .h4-style {
@@ -615,11 +619,11 @@ iframe {
   border-radius: 50%;
   margin-right: 2rem;
   margin-bottom: 2rem;
-=======
+}
 /* Contact Page */
 
 #contact-a .text-fields {
-  display: grid;
+    display: grid;
   grid-template-areas:
     "name email"
     "subject phone"
@@ -627,12 +631,12 @@ iframe {
   grid-gap: 1.2rem;
   margin-bottom: 1.2rem;
 }
+
 #contact-a .text-fields .name-input {
   grid-area: name;
 }
 #contact-a .text-fields .subject-input {
   grid-area: subject;
->>>>>>> 207bfa50c24d7848a4090d50f0694010a63f89c7
 }
 
 #contact-a .text-fields .email-input {
@@ -752,10 +756,6 @@ iframe {
   #footer .footer-container {
     grid-template-columns: 1fr;
   }
-<<<<<<< HEAD
-
-}
-=======
   #footer .footer-container > *:last-child {
     grid-column: 1;
   }
@@ -771,4 +771,3 @@ iframe {
     justify-content: center;
   }
 }
->>>>>>> 207bfa50c24d7848a4090d50f0694010a63f89c7
