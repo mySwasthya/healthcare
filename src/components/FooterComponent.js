@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Footer(props) {
   return (
     <div id="footer">
-      <div className="container footer-container py-4">
+      <div className="container footer-container py-2">
         <div>
           <h2 className="mr-auto" href="/">
             <span className="fa fa-stethoscope"></span> Swasthya
@@ -34,8 +34,8 @@ function Footer(props) {
               </Link>
             </li>
             <li>
-              <Link className="nav-link col" to="/contactus">
-                Contact us
+              <Link className="nav-link col" to="/services">
+                Services
               </Link>
             </li>
           </ul>
@@ -53,15 +53,27 @@ function Footer(props) {
           </p>
         </div>
         <div id="e">
-          <p>@ Copyright 2020 - Swasthya. All rights reserved</p>
+          <p>@ Copyright 2020 - Swasthya</p>
           <div className="text-center">
-            <a href="http://instagram.com" target="_blank">
+            <a
+              href="http://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fa fa-instagram"></i>
             </a>
-            <a href="http://www.facebook.com/profile.php?id=" target="_blank">
+            <a
+              href="http://www.facebook.com/profile.php?id="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fa fa-facebook"></i>
             </a>
-            <a href="http://www.linkedin.com/in/" target="_blank">
+            <a
+              href="http://www.linkedin.com/in/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fa fa-linkedin"></i>
             </a>
             {/* <a href="http://twitter.com/ target="_blank"">

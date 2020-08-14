@@ -256,9 +256,17 @@
 }
 
 .home-bottom {
-  background: #2b5876;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #4e4376, #2b5876);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #2b5876; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4e4376,
+    #2b5876
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4e4376,
+    #2b5876
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   height: 30vh;
 }
 .home-bottom-content {
@@ -284,14 +292,13 @@
   border-radius: 0;
   border: 0;
   display: inline-block;
-  width:250px;
+  width: 250px;
 }
 .email-button {
   border-radius: 0;
   display: inline-block;
   width: 80px;
 }
-
 
 .section1 {
   margin: 5rem 5rem 3rem 5rem;
@@ -658,9 +665,9 @@
   padding: 0.5rem;
   /* text-align: center; */
   font-size: 0.75rem;
+  margin-top: 0;
 }
 #footer .footer-container #e {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   font-size: 1.2rem;
@@ -688,14 +695,17 @@
   color: #0067e6;
 }
 .list li {
-  padding: 0.3rem 0;
+  /* padding: 0.3rem 0; */
   border-bottom: #0387af dotted 1px;
   width: 90%;
 }
 .list li:hover {
   color: #04a4d4;
 }
-@media (max-width: 500px) {
+.list li:last-child {
+  border-bottom: none;
+}
+@media (max-width: 768px) {
   #contact-a .text-fields {
     grid-template-areas:
       "name"
@@ -703,5 +713,22 @@
       "email"
       "phone"
       "message";
+  }
+  #footer .footer-container {
+    grid-template-columns: 1fr;
+  }
+  #footer .footer-container > *:last-child {
+    grid-column: 1;
+  }
+  #footer .footer-container > *:first-child,
+  #footer .footer-container > *:nth-child(2) {
+    border-bottom: #444 dotted 1px;
+    padding-bottom: 1rem;
+  }
+  #footer .footer-container #e > *:first-child {
+    display: none;
+  }
+  #footer .footer-container #e {
+    justify-content: center;
   }
 }
