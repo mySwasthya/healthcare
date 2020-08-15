@@ -9,6 +9,7 @@ import {
   Media,
 } from "reactstrap";
 import { Link } from "react-router-dom";
+import Testimonial from "./TestimonialComponent";
 
 function About() {
   return(
@@ -17,22 +18,22 @@ function About() {
         <div className="container about-container">
         <h1>About us</h1>
         <hr  className="hr-style"/>
-        
+
         <p>
-          Welcome to Swasthya, our mission here is to connect with the people of India and 
-          provide them with best medical information. Users can check for symptoms for the 
-          diseases and find the best suitable medicines and drugs. This platform will also 
+          Welcome to Swasthya, our mission here is to connect with the people of India and
+          provide them with best medical information. Users can check for symptoms for the
+          diseases and find the best suitable medicines and drugs. This platform will also
           help doctors to publish articles and blogs related to their research field.
          <br/><br/>
           So join with us on our mission to make India healthy.
-          </p> 
+          </p>
 
         <p>Sincerely,<br/> Swasthya team</p>
-         
+
         <br />
-        <h4 className="h4-style">Our Team</h4>  
+        <h4 className="h4-style">Our Team</h4>
         <hr className="hr-style" />
-        <p>We are a group of technology enthuisasts, developers and designers 
+        <p>We are a group of technology enthuisasts, developers and designers
           who want to help with problems faced by the healthcare system in India.
           We want to use technology to help others and diminish the gap between people and their health.
         </p>
@@ -55,16 +56,21 @@ function About() {
                       </div>
         </div>
 
-   
-                    
-                    
-                     
-                
-                
-            
+
+
+
+
+
+
+
         <hr className="hr-style" />
         <p>Here is a Tedex talk about Improving healthcare</p>
-        <iframe  src="https://www.youtube.com/embed/U3MtvvNjUR4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      
+        <iframe  src="https://www.youtube.com/embed/U3MtvvNjUR4" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </div>
+      <div className="row">
+          <div className="col-12">
+              <Testimonial />
+          </div>
       </div>
       <Footer />
     </div>
