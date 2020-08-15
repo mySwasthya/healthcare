@@ -127,12 +127,6 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
-.hr-style {
-  height: 2px;
-  border: 0;
-  box-shadow: inset 0 12px 12px -12px rgba(247, 243, 243, 0.966);
-}
-
 .slideshow {
   position: fixed;
   width: 100%;
@@ -398,6 +392,7 @@ body {
 }
 .tips {
   margin-top: 3%;
+  margin-bottom: 5%;
 }
 .tips-header {
   font-size: 2em;
@@ -406,14 +401,14 @@ body {
 .tips i {
   color: #04a4d4;
 }
-.health-section hr {
+.health-section hr:nth-child(1) {
   width: 75px;
   height: 3px;
   margin-top: 8px;
   background-color: #04a4d4;
   transition: width 1s ease-in-out;
 }
-.tips-header span:hover hr {
+.tips-header span:hover hr:nth-child(1) {
   width: 100%;
 } 
 .tips-content {
@@ -431,6 +426,9 @@ body {
 }
 .img-tips {
   max-height: 60vh;
+}
+.health-section p {
+  margin-bottom: 0;
 }
 @media (min-width: 768px) and (max-width: 991.98px) { 
   .health-section p {
@@ -737,15 +735,8 @@ background: linear-gradient(to bottom, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, 
 }
 
 iframe {
-  margin-top: 2rem;
-  width: 50%;
-  height: 300px;
-}
-
-@media (max-width: 576px) {
-  iframe {
-    width: 100%;
-  }
+  width: 100%;
+  height: 80vh;
 }
 
 .h4-style {

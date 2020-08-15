@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import Footer from "./FooterComponent";
+import Testimonial from './TestimonialComponent';
 
 const RenderCard = () => {
     return (
@@ -141,6 +142,8 @@ function Home() {
           </div>
         </div>
 
+        <Testimonial />
+        
         <div className="row card-space">
           <div className="col-12 col-sm-6 col-lg-4">
             <RenderCard />

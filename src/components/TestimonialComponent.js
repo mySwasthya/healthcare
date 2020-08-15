@@ -1,5 +1,5 @@
 import React from "react";
-import { Carousel } from "reactstrap";
+import Carousel from "react-bootstrap/Carousel";
 
 function Testimonial(){
   return(

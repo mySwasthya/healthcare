@@ -9,7 +9,6 @@ import {
   Media,
 } from "reactstrap";
 import { Link } from "react-router-dom";
-import Testimonial from "./TestimonialComponent";
 
 function About() {
   return(
@@ -55,22 +54,6 @@ function About() {
             <img className="circular" src="/assets/images/puneet.png" />Puneet Sharma
                       </div>
         </div>
-
-
-
-
-
-
-
-
-        <hr className="hr-style" />
-        <p>Here is a Tedex talk about Improving healthcare</p>
-        <iframe  src="https://www.youtube.com/embed/U3MtvvNjUR4" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-      </div>
-      <div className="row">
-          <div className="col-12">
-              <Testimonial />
-          </div>
       </div>
       <Footer />
     </div>
