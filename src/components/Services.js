@@ -239,8 +239,8 @@ function Services() {
           </div>
           <div className="col-sm-12 col-md-12 col-lg-4 col-xl-4 text-xl-right text-md-center text-center mt-5 mt-lg-0 pr-lg-0"></div>
         </section>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }
