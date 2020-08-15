@@ -1,23 +1,6 @@
 import React, { Component } from "react";
-import {
-  Navbar,
-  NavbarBrand,
-  Nav,
-  NavbarToggler,
-  Collapse,
-  NavItem,
-  Jumbotron,
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  Form,
-  FormGroup,
-  Input,
-  Label,
-} from "reactstrap";
+import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Button } from "reactstrap";
 import { NavLink } from "react-router-dom";
-import Signup from "./UsersignupComponent";
 
 class Header extends Component {
   constructor(props) {
@@ -56,7 +39,7 @@ class Header extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link" to="/menu">
+                  <NavLink className="nav-link" to="/services">
                     <span>Services</span>
                   </NavLink>
                 </NavItem>
@@ -68,9 +51,13 @@ class Header extends Component {
               </Nav>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <Button onClick={this.toggleModal}>Login</Button>
+                  <Button onClick={this.toggleModal}>
+                    <span className="fa fa-sign-in fa-lg"></span> Login
+                  </Button>
                   <NavLink to="/signup">
-                    <Button onClick={this.toggleModal}>Sign Up</Button>
+                    <Button onClick={this.toggleModal}>
+                      <span className="fa fa-user-plus fa-lg"></span> Sign Up
+                    </Button>
                   </NavLink>
                 </NavItem>
               </Nav>
