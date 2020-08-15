@@ -183,7 +183,7 @@ function Services() {
               alt="Medicines Image"
               className="img-service img-fluid"
             /> */}
-        {/* </div> */}}
+        {/* </div> */}
         {/* <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6">
             <div className="tm-flex-center p-5">
               <div className="tm-flex-center tm-flex-col">
