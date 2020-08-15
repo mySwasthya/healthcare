@@ -240,7 +240,7 @@
 }
 .home-head:hover hr {
   width: 300px;
-} 
+}
 .home-content {
   margin-top: 32px;
 }
@@ -253,7 +253,7 @@
 .img-height {
   min-height: 100%;
 }
-@media (max-width: 991.98px) { 
+@media (max-width: 991.98px) {
   .home-content p {
     font-size: 1em;
     line-height: 1.5;
@@ -287,7 +287,7 @@
   margin: 0 5%;;
 }
 .card {
-  margin: 10% 5%;  
+  margin: 10% 5%;
   overflow: hidden;
   box-shadow: 0 12px 6px -6px grey;
   background: #232526;  /* fallback for old browsers */
@@ -682,7 +682,7 @@ iframe {
   margin-top: 2rem;
   width: 50%;
   height: 300px;
-} 
+}
 
 @media (max-width: 576px) {
   iframe {
@@ -850,5 +850,96 @@ iframe {
   }
   #footer .footer-container #e {
     justify-content: center;
+  }
+}
+
+/* Testimonial Component */
+.carousel-background{
+background: linear-gradient(-70deg, #33adff 70%, rgba(0, 0, 0, 0) 30%),rgba(0,0,0,0);
+height: 17rem;
+}
+.circular-image{
+  border-radius: 100%;
+  height: 7rem;
+  width: 7rem;
+  float: left;
+  margin: 4rem 8rem 4rem 0rem;
+}
+.carousel-detail{
+  padding-top: 2.5rem;
+  text-align: center;
+}
+.carousel-detail .description{
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+.carousel-detail .name{
+  font-size: 1rem;
+}
+.testcontainer{
+  margin-top: 1rem;
+  text-align: center;
+}
+@media(min-width: 0px) and (max-width: 429px),
+(min-width: 430px) and (max-width: 500px),
+(min-width: 501px) and (max-width: 752px),
+(min-width: 753px) and (max-width: 768px),
+(min-width: 769px) and (max-width: 884px),
+(min-width: 885px) and (max-width: 999px),
+(min-width: 1000px) and (max-width: 1227px){
+  .carousel-background{
+  background: #33adff;
+}
+.circular-image{
+  border-radius: 100%;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  float: none;
+  margin: 0rem auto 0rem;
+}
+.carousel-detail{
+  padding-top: 0rem;
+  text-align: center;
+}
+}
+@media(min-width: 0px) and (max-width: 280px){
+  .carousel-background{
+  height: 43rem;
+}
+}
+@media(min-width: 281px) and (max-width: 439px){
+  .carousel-background{
+  height: 37.5rem;
+}
+}
+@media(min-width: 430px) and (max-width: 500px){
+  .carousel-background{
+  height: 32rem;
+}
+}
+@media(min-width: 501px) and (max-width: 752px){
+  .carousel-background{
+  height: 30rem;
+}
+}
+@media(min-width: 753px) and (max-width: 768px){
+  .carousel-background{
+  height: 28rem;
+}
+}
+@media(min-width: 769px) and (max-width: 884px){
+  .carousel-background{
+  height: 28rem;
+  }
+}
+  @media(min-width: 885px) and (max-width: 999px){
+    .carousel-background{
+    height: 25rem;
+    }
+  }
+@media(min-width: 1000px) and (max-width: 1227px){
+  .carousel-background{
+  height: 25rem;
   }
 }
