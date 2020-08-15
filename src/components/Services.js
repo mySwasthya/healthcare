@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Services() {
   return (
-    <div className="vert-align">
+    <div>
       <div className="container service-container">
         <section id="bg-blue" className="row tm-section">
           <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0">

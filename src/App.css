@@ -5,11 +5,6 @@
 }
 
 body {
-  font-family: "Dosis", sans-serif;
-}
-
-.vert-align {
-  margin-top: 12.5vh;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -17,7 +12,10 @@ body {
 .navbar {
   background-color: #31bbee;
   padding: 24px 0;
-  height: 12.5vh;
+  font-family: "Dosis", sans-serif;
+}
+.navbar .navbar-toggler {
+  border: 1.5px solid rgba(0,0,0);
 }
 
 .navbar .navbar-brand,
@@ -28,7 +26,7 @@ body {
   font-size: 1.6em;
   text-shadow: 2px 2px 4px #000000;
 }
-.navbar ul li a {
+.navbar .nav-1 li a span{
   margin: 0 10px;
   font-size: 1.2em;
   color: #fafafa;
@@ -37,10 +35,10 @@ body {
   padding-bottom: 0.5rem;
   transition: border-color 0.5s;
 }
-.navbar ul li a:hover {
+.navbar .nav-1 li a span:hover {
   border-color: #fafafa;
 }
-.navbar ul li a.current {
+.navbar .nav-1 li .active {
   border-color: #fff;
 }
 .nav-item button {

@@ -29,7 +29,7 @@ const RenderCard = () => {
 
 function Home() {
     return (
-      <div className="vert-align">
+      <div>
         <div className="img-fluid img-home">
           <div id="landing-header">
             <h1>Let's do it together</h1>

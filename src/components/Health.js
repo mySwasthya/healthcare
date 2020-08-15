@@ -4,7 +4,7 @@ import Footer from "./FooterComponent";
 
 function Health() {
     return (
-      <div className="vert-align">
+      <div>
         <div className="health-section">
           <div className="row">
             <div className="col-12 col-md-6">
@@ -120,6 +120,7 @@ function Health() {
                 <div className="col-12 col-md-5 order-1 order-md-2 pr-0 ml-0 mb-4">
                   <img
                     src="/assets/images/diet.jpg"
+                    alt="diet"
                     className="img-fluid img-height"
                   />
                 </div>
@@ -193,6 +194,7 @@ function Health() {
                 <div className="col-12 col-md-5 order-1 order-md-2 pr-0 ml-0 mb-4">
                   <img
                     src="/assets/images/meditation.jpg"
+                    alt="meditation"
                     className="img-fluid img-height"
                   />
                 </div>
