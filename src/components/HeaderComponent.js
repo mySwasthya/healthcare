@@ -1,5 +1,13 @@
 import React, { Component } from "react";
-import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Button } from "reactstrap";
+import {
+  Navbar,
+  NavbarBrand,
+  Nav,
+  NavbarToggler,
+  Collapse,
+  NavItem,
+  Button,
+} from "reactstrap";
 import { NavLink } from "react-router-dom";
 
 class Header extends Component {
@@ -52,11 +60,12 @@ class Header extends Component {
               <Nav className="ml-auto" navbar>
                 <NavItem>
                   <Button onClick={this.toggleModal}>
-                    <span className="fa fa-sign-in fa-lg"></span> Login
+                    {/* <span className="fa fa-sign-in fa-lg"></span>*/} Login
                   </Button>
                   <NavLink to="/signup">
                     <Button onClick={this.toggleModal}>
-                      <span className="fa fa-user-plus fa-lg"></span> Sign Up
+                      {/*<span className="fa fa-user-plus fa-lg"></span>*/}
+                      Sign Up
                     </Button>
                   </NavLink>
                 </NavItem>

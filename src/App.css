@@ -287,9 +287,17 @@ body {
   margin-top: 0;
   overflow: hidden;
   box-shadow: 0 12px 6px -6px grey;
-  background: #232526;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
   border: none;
 }
@@ -764,9 +772,17 @@ body {
 
 /*..............about.............*/
 .about-container {
-  background: #2C3E50;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #2c3e50; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #4ca1af,
+    #2c3e50
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #4ca1af,
+    #2c3e50
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #fff;
   padding: 1.5rem;
 }
@@ -782,7 +798,7 @@ iframe {
 .circular {
   width: 110px;
   height: 110px;
-  border-style:double;
+  border-style: double;
   border-radius: 50%;
   margin-right: 2rem;
   margin-bottom: 2rem;
@@ -790,7 +806,7 @@ iframe {
 /* Contact Page */
 
 #contact-a .text-fields {
-    display: grid;
+  display: grid;
   grid-template-areas:
     "name email"
     "subject phone"
@@ -941,92 +957,293 @@ iframe {
 }
 
 /* Testimonial Component */
-.carousel-background{
-background: linear-gradient(-70deg, #33adff 70%, rgba(0, 0, 0, 0) 30%),rgba(0,0,0,0);
-height: 17rem;
+.carousel-background {
+  background: linear-gradient(-70deg, #33adff 70%, rgba(0, 0, 0, 0) 30%),
+    rgba(0, 0, 0, 0);
+  height: 17rem;
 }
-.circular-image{
+.circular-image {
   border-radius: 100%;
   height: 7rem;
   width: 7rem;
   float: left;
   margin: 4rem 8rem 4rem 0rem;
 }
-.carousel-detail{
+.carousel-detail {
   padding-top: 2.5rem;
   text-align: center;
 }
-.carousel-detail .description{
+.carousel-detail .description {
   font-size: 1.2rem;
   margin-top: 2rem;
 }
-.carousel-detail .name{
+.carousel-detail .name {
   font-size: 1rem;
 }
-.testcontainer{
+.testcontainer {
   margin-top: 1rem;
   text-align: center;
 }
-@media(min-width: 0px) and (max-width: 429px),
-(min-width: 430px) and (max-width: 500px),
-(min-width: 501px) and (max-width: 752px),
-(min-width: 753px) and (max-width: 768px),
-(min-width: 769px) and (max-width: 884px),
-(min-width: 885px) and (max-width: 999px),
-(min-width: 1000px) and (max-width: 1227px){
-  .carousel-background{
-  background: #33adff;
-}
-.circular-image{
-  border-radius: 100%;
-  height: 6rem;
-  width: 6rem;
-  text-align: center;
-  float: none;
-  margin: 0rem auto 0rem;
-}
-.carousel-detail{
-  padding-top: 0rem;
-  text-align: center;
-}
-}
-@media(min-width: 0px) and (max-width: 280px){
-  .carousel-background{
-  height: 43rem;
-}
-}
-@media(min-width: 281px) and (max-width: 439px){
-  .carousel-background{
-  height: 37.5rem;
-}
-}
-@media(min-width: 430px) and (max-width: 500px){
-  .carousel-background{
-  height: 32rem;
-}
-}
-@media(min-width: 501px) and (max-width: 752px){
-  .carousel-background{
-  height: 30rem;
-}
-}
-@media(min-width: 753px) and (max-width: 768px){
-  .carousel-background{
-  height: 28rem;
-}
-}
-@media(min-width: 769px) and (max-width: 884px){
-  .carousel-background{
-  height: 28rem;
+@media (min-width: 0px) and (max-width: 429px),
+  (min-width: 430px) and (max-width: 500px),
+  (min-width: 501px) and (max-width: 752px),
+  (min-width: 753px) and (max-width: 768px),
+  (min-width: 769px) and (max-width: 884px),
+  (min-width: 885px) and (max-width: 999px),
+  (min-width: 1000px) and (max-width: 1227px) {
+  .carousel-background {
+    background: #33adff;
+  }
+  .circular-image {
+    border-radius: 100%;
+    height: 6rem;
+    width: 6rem;
+    text-align: center;
+    float: none;
+    margin: 0rem auto 0rem;
+  }
+  .carousel-detail {
+    padding-top: 0rem;
+    text-align: center;
   }
 }
-  @media(min-width: 885px) and (max-width: 999px){
-    .carousel-background{
+@media (min-width: 0px) and (max-width: 280px) {
+  .carousel-background {
+    height: 43rem;
+  }
+}
+@media (min-width: 281px) and (max-width: 439px) {
+  .carousel-background {
+    height: 37.5rem;
+  }
+}
+@media (min-width: 430px) and (max-width: 500px) {
+  .carousel-background {
+    height: 32rem;
+  }
+}
+@media (min-width: 501px) and (max-width: 752px) {
+  .carousel-background {
+    height: 30rem;
+  }
+}
+@media (min-width: 753px) and (max-width: 768px) {
+  .carousel-background {
+    height: 28rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 884px) {
+  .carousel-background {
+    height: 28rem;
+  }
+}
+@media (min-width: 885px) and (max-width: 999px) {
+  .carousel-background {
     height: 25rem;
-    }
   }
-@media(min-width: 1000px) and (max-width: 1227px){
-  .carousel-background{
-  height: 25rem;
+}
+@media (min-width: 1000px) and (max-width: 1227px) {
+  .carousel-background {
+    height: 25rem;
   }
+}
+
+/* Services */
+
+.tm-site-name {
+  font-size: 4rem;
+}
+
+.tm-quote {
+  font-size: 1.35rem;
+  font-style: italic;
+}
+
+.service-container {
+  margin-top: 7.7rem;
+}
+
+.tm-container-inner {
+  margin: 0 auto;
+  max-width: 880px;
+}
+
+.tm-section {
+  background-color: white;
+}
+
+.tm-section,
+.tm-section-min-h {
+  min-height: 400px;
+}
+
+.tm-flex-center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tm-flex-col {
+  flex-direction: column;
+}
+
+.tm-mb-30 {
+  margin-bottom: 30px;
+}
+
+.tm-align-left {
+  align-self: left;
+}
+
+/* .service-btn {
+  border-radius: 0;
+  text-transform: uppercase;
+  padding: 12px 47px;
+  font-size: 1.15rem;
+}
+
+.service-btn-primary {
+  background: #993333;
+  border-color: #993333;
+}
+
+.service-btn-secondary {
+  background: #009999;
+  border-color: #009999;
+}
+
+.service-btn-secondary:hover,
+.service-btn-secondary:focus {
+  background: #24d4d4;
+  border-color: #24d4d4;
+}
+
+.service-btn-primary:focus,
+.service-btn-primary:hover {
+  background: #ec4949;
+  border-color: #ec4949;
+} */
+
+.tm-bg-color-primary {
+  background-color: #993333;
+}
+.tm-bg-color-secondary {
+  background-color: #009999;
+}
+.tm-bg-color-gray {
+  background-color: #666666;
+}
+.tm-text-color-primary {
+  color: #993333;
+}
+.tm-text-color-white {
+  color: white;
+}
+.tm-text-color-gray {
+  color: #666666;
+}
+.tm-font-thin {
+  font-weight: 300;
+}
+.tm-max-w-400 {
+  max-width: 400px;
+}
+
+.tm-pricing-table {
+  border: 1px solid #009999;
+  width: 100%;
+  max-width: 340px;
+}
+
+.tm-pricing-header {
+  padding: 20px;
+}
+
+.tm-pricing-body {
+  padding-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tm-pricing-header-title {
+  font-size: 1.6rem;
+}
+
+.tm-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 2.4;
+  padding: 35px 50px;
+}
+
+.tm-footer-info-box {
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+select:focus {
+  outline-color: #993334;
+}
+
+.tm-center {
+  width: 100%;
+  text-align: center;
+}
+
+.tm-copyright-text {
+  padding: 20px;
+  font-size: 1rem;
+}
+
+/* JavaScript Turned Off */
+.no-js #loader-wrapper {
+  display: none;
+}
+
+.tm-col-md-reverse {
+  flex-direction: column-reverse;
+}
+
+.tm-col-md-reverse > * {
+  flex: 1;
+}
+
+@media (min-width: 992px) {
+  .tm-col-md-reverse {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .tm-md-flex-center {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tm-md-align-center {
+    align-self: center;
+  }
+
+  .tm-pl-l {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .tm-contact-form {
+    padding: 30px 25px;
+  }
+}
+#bg-blue {
+  background: #d6edf5;
 }
