@@ -1,5 +1,6 @@
-import React from 'react';
-import Footer from './FooterComponent';
+import React from 'react'
+import Newsletter from './Newsletter';
+import Footer from "./FooterComponent";
 
 function Health() {
     return (
@@ -43,7 +44,7 @@ function Health() {
                 <hr />
               </span>
             </div>
-            <div>
+            <div className="tips-tag">
               If you are looking for the path toward a healthier you? It's not
               hard to find. The journey begins with some simple tweaks to your
               lifestyle. The right diet, exercise, and stress-relief plan all
@@ -94,23 +95,26 @@ function Health() {
             <div className="tips-point">
               <div className="row ml-0">
                 <div className="col-12 col-md-7 order-2 order-md-1 pl-0 ml-0">
-                  <h5>
-                    <strong>Maintain healthy diet</strong>
-                  </h5>
-                  <div>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Optio laboriosam, laudantium cupiditate rem eveniet at quae
-                    officiis ut accusantium animi nihil! Expedita iure autem
-                    ipsam impedit non culpa obcaecati enim. Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Similique, accusamus
-                    cum! Dolorum iure obcaecati laborum sit ullam illo sed et
-                    iste, eligendi corporis placeat repellendus, aliquam porro
-                    ratione expedita omnis. Lorem ipsum dolor sit, amet
-                    consectetur adipisicing elit. Ipsam eum natus optio quia
-                    expedita tempore. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Libero, natus esse quam eveniet dolorem
-                    deleniti repellat nostrum at? Deserunt ratione culpa modi
-                    accusantium magnam cumque quod eligendi eos nihil neque.
+                  <div className="align-text-mid m-0">
+                    <h5>
+                      <strong>Maintain healthy diet</strong>
+                    </h5>
+                    <div>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Optio laboriosam, laudantium cupiditate rem eveniet at
+                      quae officiis ut accusantium animi nihil! Expedita iure
+                      autem ipsam impedit non culpa obcaecati enim. Lorem ipsum
+                      dolor sit amet, consectetur adipisicing elit. Similique,
+                      accusamus cum! Dolorum iure obcaecati laborum sit ullam
+                      illo sed et iste, eligendi corporis placeat repellendus,
+                      aliquam porro ratione expedita omnis. Lorem ipsum dolor
+                      sit, amet consectetur adipisicing elit. Ipsam eum natus
+                      optio quia expedita tempore. Lorem ipsum dolor sit amet
+                      consectetur adipisicing elit. Libero, natus esse quam
+                      eveniet dolorem deleniti repellat nostrum at? Deserunt
+                      ratione culpa modi accusantium magnam cumque quod eligendi
+                      eos nihil neque.
+                    </div>
                   </div>
                 </div>
                 <div className="col-12 col-md-5 order-1 order-md-2 pr-0 ml-0 mb-4">
@@ -164,23 +168,26 @@ function Health() {
             <div className="tips-point">
               <div className="row ml-0">
                 <div className="col-12 col-md-7 order-2 order-md-1 pl-0 ml-0">
-                  <h5>
-                    <strong>Yoga and Meditation</strong>
-                  </h5>
-                  <div>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Optio laboriosam, laudantium cupiditate rem eveniet at quae
-                    officiis ut accusantium animi nihil! Expedita iure autem
-                    ipsam impedit non culpa obcaecati enim. Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Similique, accusamus
-                    cum! Dolorum iure obcaecati laborum sit ullam illo sed et
-                    iste, eligendi corporis placeat repellendus, aliquam porro
-                    ratione expedita omnis. Lorem ipsum dolor sit, amet
-                    consectetur adipisicing elit. Ipsam eum natus optio quia
-                    expedita tempore. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Libero, natus esse quam eveniet dolorem
-                    deleniti repellat nostrum at? Deserunt ratione culpa modi
-                    accusantium magnam cumque quod eligendi eos nihil neque.
+                  <div className="align-text-mid m-0">
+                    <h5>
+                      <strong>Yoga and Meditation</strong>
+                    </h5>
+                    <div>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Optio laboriosam, laudantium cupiditate rem eveniet at
+                      quae officiis ut accusantium animi nihil! Expedita iure
+                      autem ipsam impedit non culpa obcaecati enim. Lorem ipsum
+                      dolor sit amet, consectetur adipisicing elit. Similique,
+                      accusamus cum! Dolorum iure obcaecati laborum sit ullam
+                      illo sed et iste, eligendi corporis placeat repellendus,
+                      aliquam porro ratione expedita omnis. Lorem ipsum dolor
+                      sit, amet consectetur adipisicing elit. Ipsam eum natus
+                      optio quia expedita tempore. Lorem ipsum dolor sit amet
+                      consectetur adipisicing elit. Libero, natus esse quam
+                      eveniet dolorem deleniti repellat nostrum at? Deserunt
+                      ratione culpa modi accusantium magnam cumque quod eligendi
+                      eos nihil neque.
+                    </div>
                   </div>
                 </div>
                 <div className="col-12 col-md-5 order-1 order-md-2 pr-0 ml-0 mb-4">
@@ -232,9 +239,20 @@ function Health() {
               </div>
             </div>
           </div>
-          <p>Here is a Tedex talk about Improving healthcare</p>
-          <iframe src="https://www.youtube.com/embed/U3MtvvNjUR4" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          <p>
+            <strong>Here is a Tedex talk about Improving Healthcare</strong>
+          </p>
+          <iframe
+            src="https://www.youtube.com/embed/U3MtvvNjUR4"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
+        <div className="health-bottom-text">
+          For more help please subscribe to our Newsletter
+        </div>
+        <Newsletter />
         <Footer />
       </div>
     );

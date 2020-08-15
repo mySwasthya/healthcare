@@ -233,7 +233,7 @@ body {
   transition: width 1s linear;
 }
 .home-head:hover hr {
-  width: 300px;
+  width: 425px;
 }
 .home-content {
   margin-top: 32px;
@@ -279,10 +279,12 @@ body {
 }
 
 .card-space {
-  margin: 5% 5%;;
+  margin: 5% 5%;
+  margin-top: 0;
 }
 .card {
   margin: 10% 5%;
+  margin-top: 0;
   overflow: hidden;
   box-shadow: 0 12px 6px -6px grey;
   background: #232526;  /* fallback for old browsers */
@@ -351,33 +353,37 @@ body {
   padding-top: 5vh;
   color: white;
   font-size: 1.2em;
+  display: block;
 }
 .home-bottom-content hr {
   height: 1px;
-  width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #fafafa;
 }
 .form-wrapper {
-  width: 50%;
-  margin: 3% 35%;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+}
+.form-group {
+  margin-bottom: 0;
 }
 .form-inline .form-control.email-field {
   border-radius: 0;
   border: 0;
-  display: inline-block;
   width:250px;
 }
 .email-button {
   border-radius: 0;
-  display: inline-block;
   width: 80px;
 }
 
 /* Health Page */
 .health-section {
-  margin: 5% 5%;
+  margin: 2.5% 5%;
   margin-top: 20vh;
   font-size: 1.2em;
   line-height: 1.6;
@@ -417,12 +423,16 @@ body {
 .tips-point {
   margin-top: 20px;
 }
+.tips-point h5 {
+  display: inline;
+}
 .tips-point:hover h5 {
   color: #04a4d4;
   transition: .4s linear;
 }
 .tips-point div {
   margin-left: 16px;
+  margin-top: 12px;
 }
 .img-tips {
   max-height: 60vh;
@@ -430,14 +440,41 @@ body {
 .health-section p {
   margin-bottom: 0;
 }
+.health-bottom-text {
+  text-align: center;
+  font-size: 1.4em;
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  word-spacing: 3px;
+  -webkit-animation: blink 1s step-end infinite;
+  animation: blink 2s ease-in infinite;
+}
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes blink { 
+  50% { 
+    opacity: 0; 
+  }
+}
+
+.align-text-mid {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
 @media (min-width: 768px) and (max-width: 991.98px) { 
-  .health-section p {
+  .health-section p, .tips-tag, .tips-point div {
     font-size: 14px;
     line-height: 1.5;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  .health-section p {
+  .health-section p, .tips-tag, .tips-point div {
     font-size: 1em;
   }
 }

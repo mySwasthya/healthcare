@@ -3,6 +3,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } fr
 import { Link } from 'react-router-dom';
 import Footer from "./FooterComponent";
 import Testimonial from './TestimonialComponent';
+import Newsletter from './Newsletter';
 
 const RenderCard = () => {
     return (
@@ -34,7 +35,7 @@ function Home() {
             <h1>Let's do it together</h1>
             <p>We Believe Everyone Should Have Easy Access To Health Care</p>
             <Button size="lg" className="button1">
-              <Link to="/health">Stay Healthy</Link>
+              <Link to="/health">Health Tips</Link>
             </Button>
           </div>
         </div>
@@ -57,7 +58,7 @@ function Home() {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, natus esse quam eveniet dolorem
                     deleniti repellat nostrum at? Deserunt ratione culpa modi accusantium magnam cumque quod eligendi eos nihil neque.</p>
                 </div>
-                <div className="col-12 col-md-5 order-1 order-md-2">
+                <div className="col-12 col-md-5 order-1 order-md-2 mb-4">
                   <img src="/assets/images/work.jpg" alt="Medicines Image" className="img-fluid img-height rounded" />
                 </div>
               </div>
@@ -74,7 +75,7 @@ function Home() {
             </div>
             <div className="home-content">
               <div className="row">
-                <div className="col-12 col-md-5">
+                <div className="col-12 col-md-5 mb-4">
                   <img src="/assets/images/main1.jpg" alt="Medicines Image" className="img-fluid img-height rounded" />
                 </div>
                 <div className="col-12 col-md-7">
@@ -142,8 +143,23 @@ function Home() {
           </div>
         </div>
 
+        <div className="home-section">
+          <div className="home-head">
+            <i className="fa fa-users fa-4x" aria-hidden="true"></i>
+            <span className="home-header"> Testimonials</span>
+            <hr />
+          </div>
+        </div>
         <Testimonial />
         
+        <div className="home-section">
+          <div className="home-head">
+            <i className="fa fa-microblog fa-4x" aria-hidden="true"></i>
+            <span className="home-header"> Featured</span>
+            <hr />
+          </div>
+        </div>
+
         <div className="row card-space">
           <div className="col-12 col-sm-6 col-lg-4">
             <RenderCard />
@@ -165,35 +181,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="home-bottom">
-          <div className="container">
-            <div className="home-bottom-content">
-              Stay in Touch
-              <hr />
-              <div className="form-wrapper">
-                <form className="form-inline text-center">
-                  <div className="form-group">
-                    <label htmlFor="email" className="sr-only">
-                      Password
-                    </label>
-                    <input
-                      type="email"
-                      className="form-control email-field"
-                      id="email"
-                      placeholder="Enter your email address"
-                    ></input>
-                  </div>
-                  <button
-                    type="submit"
-                    className="btn btn-primary email-button"
-                  >
-                    Submit
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Newsletter />
         <Footer />
       </div>
     );
