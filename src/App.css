@@ -255,13 +255,13 @@ body {
 .img-height {
   min-height: 100%;
 }
-@media (max-width: 991.98px) { 
+@media (min-width: 768px) and (max-width: 991.98px) { 
   .home-content p {
     font-size: 1em;
     line-height: 1.5;
   }
 }
-@media (max-width: 1199.98px) {
+@media (min-width: 992px) and  (max-width: 1199.98px) {
   .home-content p {
     font-size: 1em;
   }
@@ -384,18 +384,66 @@ body {
 /* Health Page */
 .health-section {
   margin: 5% 5%;
-  margin-top: 11.5%;
+  margin-top: 20vh;
+  font-size: 1.2em;
+  line-height: 1.6;
 }
 .img-health {
   min-height: 100%;
 }
 .health-section p {
-  font-size: 1.2em;
-  line-height: 1.6;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
+.tips {
+  margin-top: 3%;
+}
+.tips-header {
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.tips i {
+  color: #04a4d4;
+}
+.health-section hr {
+  width: 75px;
+  height: 3px;
+  margin-top: 8px;
+  background-color: #04a4d4;
+  transition: width 1s ease-in-out;
+}
+.tips-header span:hover hr {
+  width: 100%;
+} 
+.tips-content {
+  margin-top: 32px;
+}
+.tips-point {
+  margin-top: 20px;
+}
+.tips-point:hover h5 {
+  color: #04a4d4;
+  transition: .4s linear;
+}
+.tips-point div {
+  margin-left: 16px;
+}
+.img-tips {
+  max-height: 60vh;
+}
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .health-section p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .health-section p {
+    font-size: 1em;
+  }
+}
+
 
 .section1 {
   margin: 5rem 5rem 3rem 5rem;
