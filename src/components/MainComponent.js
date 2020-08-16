@@ -5,7 +5,7 @@ import Carousel from './Carousel';
 import Home from './Home';
 import Contact from './Contact';
 import About from './AboutComponent';
-import Signup from './UsersignupComponent';
+import Signup from './SignupCpnt';
 import Services from './Services';
 import Health from './Health';
 
@@ -30,4 +30,3 @@ class Main extends Component {
 }
 
 export default Main;
-

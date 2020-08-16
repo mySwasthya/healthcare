@@ -247,7 +247,7 @@ body {
 .img-height {
   min-height: 100%;
 }
-@media (min-width: 768px) and (max-width: 991.98px) { 
+@media (min-width: 768px) and (max-width: 991.98px) {
   .home-content p {
     font-size: 1em;
     line-height: 1.5;
@@ -422,7 +422,7 @@ body {
 }
 .tips-header span:hover hr:nth-child(1) {
   width: 100%;
-} 
+}
 .tips-content {
   margin-top: 32px;
 }
@@ -462,9 +462,9 @@ body {
     opacity: 0;
   }
 }
-@keyframes blink { 
-  50% { 
-    opacity: 0; 
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
 }
 
@@ -473,7 +473,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-@media (min-width: 768px) and (max-width: 991.98px) { 
+@media (min-width: 768px) and (max-width: 991.98px) {
   .health-section p, .tips-tag, .tips-point div {
     font-size: 14px;
     line-height: 1.5;
@@ -1245,4 +1245,342 @@ select:focus {
 }
 #bg-blue {
   background: #d6edf5;
+}
+
+/* Signup Component*/
+.signuppage{
+  height: 82rem;
+  padding-top: 10rem;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, rgb(65, 88, 208,1) 0%, rgb(200, 80, 192,0.5) 46%,rgb(255, 204, 112,0.5) 100%) ,url("/assets/images/usersignup.jpg");
+  background-position: center;
+  background-size: cover;
+  font-family: "Dosis", sans-serif;
+}
+.signupimages{
+  margin: 0rem 25rem 2rem;
+  height: 64.5rem;
+  background: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  position: relative;
+  z-index: 0;
+}
+.doctor, .user{
+  min-width: 50%;
+  background: #ffffff;
+  height: 20%;
+  display: inline-block;
+  border: none;
+}
+.doctor{
+  padding: 1rem 1rem 0rem 2rem;
+}
+.user{
+  padding: 1rem 2rem 0rem 1rem;
+}
+.signupform{
+  text-align: left;
+  padding: 2rem 2rem 0rem;
+}
+.signupform .signup{
+  color: #5db0ef;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.namefield{
+  display: block;
+}
+.firstname,.lastname{
+  display: inline-block;
+  width: 45%;
+  border: none;
+}
+.emptyspace{
+  display: inline-block;
+  width: 10%;
+}
+.firstname input,.lastname input{
+  width: 100%;
+}
+.createaccount{
+  display: block;
+  width: 100%;
+  border: none;
+  background: #00c6ff;
+  background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+button .create{
+  margin-right: 0.5rem;
+}
+.signupform form{
+margin-top: 2rem;
+}
+.email input, .password input, .confirmpassword input{
+  display: block;
+  width: 100%;
+}
+.firstname input, .lastname input{
+  margin-bottom: 1rem;
+}
+.email label, .password label, .confirmpassword label, .firstname label, .lastname label{
+  color: #4d4d4d;
+  margin: 0rem;
+  font-weight: 800;
+}
+.email input, .password input, .confirmpassword input, .firstname input, .lastname input{
+  color: #8c8c8c;
+  border-color: #a6a6a6;
+  border-width: thin;
+  height: 1.5rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
+.forgotpassword{
+  float: right;
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+  color: #1a1a1a;
+}
+.confirmpassword{
+  margin-bottom: 0rem;
+}
+.openauthentication{
+  text-align: center;
+  display: block;
+}
+.openauthentication a{
+  text-decoration: none;
+}
+.fag, .fab, .fat{
+  padding: 1.5rem;
+  border-radius: 100%;
+  margin: 1.5rem 1rem 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fag a, .fab a, .fat a{
+text-decoration: none;
+}
+.fab{
+  padding-right: 2rem;
+  border-radius: 100%;
+}
+.fab {
+  background: #3B5998;
+  color: white;
+}
+.fat{
+  background: #55ACEE;
+  color: white;
+}
+.fag {
+  background: #dd4b39;
+  color: white;
+}
+.fab:hover{
+  background: #324b81;
+  color: white;
+}
+.fag:hover{
+  background: #c43421;
+  color: white;
+}
+.fat:hover{
+  background: #178de8;
+  color: white;
+}
+.signupicon, .createaccount,.fag, .fat, .fab{
+  -webkit-box-shadow: 0.3em 0.4em 0.5em #cccccc;
+  -moz-box-shadow: 0.3em 0.4em 0.5em #cccccc;
+  box-shadow: 0.3em 0.4em 0.5em #cccccc;
+}
+.haveanaccount{
+  text-align: center;
+}
+.haveanaccount span{
+  margin-right: 0.25rem;
+}
+.haveanaccount p{
+  margin-bottom: 0rem;
+}
+.forgotpassword a, .haveanaccount a{
+  text-decoration: none;
+}
+.hrule {
+  width: 100%;
+  text-align: center;
+  border-bottom: 0.05em solid #a6a6a6;
+  line-height: 0.05em;
+  margin: 1.5rem auto 1.5rem;
+}
+.hrule span {
+  background: #ffffff;
+  padding: 0 10px;
+  font-size: 0.46em;
+  font-weight: normal;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+.hrule span em {
+  color: #a6a6a6;
+}
+.doctoption{
+  height: 100%;
+  width: 100%;
+  background: url("/assets/images/doctor.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.4rem;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  padding-top: 4rem;
+}
+.useroption{
+  height: 100%;
+  width: 100%;
+  background: url("/assets/images/patient.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.4rem;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  padding-top: 4rem;
+}
+.signupheading{
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  color: #5db0ef;
+}
+.doctoption:hover,.useroption:hover{
+  opacity: 0.7;
+}
+.doctoption span, .useroption span{
+  font-size: 1.5rem;
+  color: #5db0ef;
+  font-weight: bold;
+  visibility: hidden;
+}
+.doctoption:hover span, .useroption:hover span{
+  visibility: visible;
+}
+.useroption:hover, .doctoption:hover{
+  transform: scale(1.1);
+}
+.signupicon {
+  margin: 0rem auto -2.2rem;
+  border-radius: 100%;
+  text-align: center;
+  padding: 1.2rem 0.5rem 1rem 1rem;
+  background: #00c6ff;
+  background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  color: #ffffff;
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  z-index: 1;
+}
+.createaccount:hover {
+  background: -webkit-linear-gradient(to right, #0067e6, #00b4e6);
+  background: linear-gradient(to right, #0067e6, #00b4e6);
+}
+@media(min-width: 0px) and (max-width: 330px){
+  .signuppage{
+    height: 105rem;
+  }
+  .signupimages{
+    margin: 0rem 1rem 2rem;
+    height: 90rem;
+  }
+  .fag, .fab, .fat{
+    padding: 1rem;
+    margin: 1.5rem 0.1rem 4rem;
+  }
+  .fab{
+    padding-right: 1.5rem;
+  }
+  .doctor{
+    display: block;
+    padding: 1rem 2.5rem 1rem 2.5rem;
+  }
+  .user{
+    display: block;
+    padding: 1rem 2rem 1rem 2rem;
+  }
+}
+@media(min-width: 331px) and (max-width: 415px){
+  .signupimages{
+    margin: 0rem 1rem 2rem;
+    height: 67rem;
+  }
+  .fag, .fab, .fat{
+    padding: 1.5rem;
+    margin: 1.5rem 0.5rem 4rem;
+  }
+  .fab{
+    padding-right: 2rem;
+  }
+}
+@media(min-width: 416px) and (max-width: 500px){
+  .signupimages{
+    margin: 0rem 3rem 2rem;
+    height: 67rem;
+  }
+  .fag, .fab, .fat{
+    padding: 1.5rem;
+    margin: 1.5rem 0.4rem 4rem;
+  }
+  .fab{
+    padding-right: 2rem;
+  }
+}
+@media(min-width: 501px) and (max-width: 551px){
+  .signupimages{
+    margin: 0rem 2rem 2rem;
+    height: 64rem;
+  }
+}
+@media(min-width: 552px) and (max-width: 710px){
+  .signupimages{
+    margin: 0rem 5rem 2rem;
+    height: 65rem;
+  }
+}
+@media(min-width: 711px) and (max-width: 1022px){
+  .signupimages{
+    margin: 0rem 10rem 2rem;
+    height: 65rem;
+  }
+}
+@media(min-width: 1023px) and (max-width: 1200px){
+  .signuppage{
+    height: 90rem;
+  }
+  .signupimages{
+    margin: 2rem 18rem 5rem;
+    height: 66rem;
+  }
+  .signupicon{
+      margin: 6rem auto -4.2rem;
+  }
+}
+.signuprule{
+  border-width: 0.5rem;
+  border-style: dotted;
+  border-bottom: none;
+  border-color:#e6e6e6;
+  width: 15%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
