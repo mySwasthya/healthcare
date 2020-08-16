@@ -109,6 +109,11 @@ function Home() {
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam eum natus optio quia expedita tempore.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, natus esse quam eveniet dolorem
                     deleniti repellat nostrum at? Deserunt ratione culpa modi accusantium magnam cumque quod eligendi eos nihil neque.</p>
+                    <Link to="/services">
+                      <Button size="lg" color="primary"  className="mt-1">
+                        Book Appointment
+                      </Button>
+                    </Link>
                 </div>
                 <div className="col-12 col-md-6 order-1 order-md-2">
                   <div className="row icons">
@@ -154,7 +159,7 @@ function Home() {
         
         <div className="home-section">
           <div className="home-head">
-            <i className="fa fa-microblog fa-4x" aria-hidden="true"></i>
+            <i className="fas fa-comment-dots fa-4x" aria-hidden="true"></i>
             <span className="home-header"> Featured</span>
             <hr />
           </div>

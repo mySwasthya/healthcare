@@ -19,10 +19,10 @@ class Header extends Component {
       active2: "",
       active3: "",
       active4: "",
+      isNavOpen: false,
     };
 
     this.toggleNav = this.toggleNav.bind(this);
-    this.toggleActive = this.toggleActive.bind(this);
   }
   toggleNav() {
     this.setState({
@@ -81,6 +81,13 @@ class Header extends Component {
                     >
                       Home
                     </span>
+                    <span
+                      className={
+                        document.location.pathname == "/home" && "active "
+                      }
+                    >
+                      Home
+                    </span>
                   </NavLink>
                 </NavItem>
                 <NavItem>
@@ -88,6 +95,13 @@ class Header extends Component {
                     <span
                       className={this.state.active2}
                       onClick={() => this.toggleActive(2)}
+                    >
+                      About us
+                    </span>
+                    <span
+                      className={
+                        document.location.pathname == "/aboutus" && "active "
+                      }
                     >
                       About us
                     </span>
@@ -101,6 +115,24 @@ class Header extends Component {
                     >
                       Services
                     </span>
+                    <span
+                      className={
+                        document.location.pathname == "/services" && "active "
+                      }
+                    >
+                      Services
+                    </span>
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="nav-link" to="/health">
+                    <span
+                      className={
+                        document.location.pathname == "/health" && "active "
+                      }
+                    >
+                      Health
+                    </span>
                   </NavLink>
                 </NavItem>
                 <NavItem>
@@ -111,15 +143,23 @@ class Header extends Component {
                     >
                       Contact
                     </span>
+                    <span
+                      className={
+                        document.location.pathname == "/contact" && "active "
+                      }
+                    >
+                      Contact
+                    </span>
                   </NavLink>
                 </NavItem>
               </Nav>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <Button className="mr-3">
-                    {/* <span className="fa fa-sign-in fa-lg"></span> */}
-                    Login
-                  </Button>
+                  <NavLink to="/login">
+                    <Button className="mr-3">
+                      <span className="fa fa-sign-in fa-lg"></span> Login
+                    </Button>
+                  </NavLink>
                   <NavLink to="/signup">
                     <Button>
                       {/* <span className="fa fa-user-plus fa-lg"></span> */}

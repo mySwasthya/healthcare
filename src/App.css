@@ -38,7 +38,7 @@ body {
 .navbar .nav-1 li a span:hover {
   border-color: #fafafa;
 }
-.navbar .nav-1 li .active {
+.navbar .nav-1 li .active span {
   border-color: #fff;
 }
 .nav-item button {
@@ -203,10 +203,6 @@ body {
 .img-home:hover {
   opacity: 0.9;
 }
-.img-home #landing-header {
-  padding-top: 30vh;
-}
-
 .home-section {
   margin: 3% 7.5%;
   text-align: center;
@@ -242,9 +238,6 @@ body {
   text-align: center;
   font-size: 1.2em;
   line-height: 1.8;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 .img-height {
   min-height: 100%;
@@ -1483,7 +1476,7 @@ button .create {
 .useroption {
   height: 100%;
   width: 100%;
-  background: url("/assets/images/patient.jpg");
+  background: url("/assets/images/user.jpg");
   background-position: center;
   background-size: cover;
   border-radius: 0.4rem;
@@ -1515,6 +1508,13 @@ button .create {
 .useroption:hover,
 .doctoption:hover {
   transform: scale(1.1);
+}
+.active-form {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+.active-form span {
+  visibility: visible;
 }
 .signupicon {
   margin: 0rem auto -2.2rem;
