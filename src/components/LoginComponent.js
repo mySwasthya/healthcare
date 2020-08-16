@@ -111,7 +111,6 @@ class Signup extends Component {
                 </h2>
                 <a href="#" className="fa fa-google faglogin"></a>
                 <a href="#" className="fa fa-facebook fablogin"></a>
-                <a href="#" className="fa fa-twitter fatlogin"></a>
               </div>
               <div className="donthaveanaccount">
                 <p>
