@@ -85,6 +85,10 @@ class Signup extends Component{
                           <input type = "text" id="lastname" name="lastname" required/>
                         </div>
                       </div>
+                      <div className = "username">
+                        <label><span href="#" className="fa fa-user-circle"></span> Username </label><br/>
+                        <input type = "text" required/><br/>
+                      </div>
                       <div className = "email">
                         <label htmlFor="email"><span href="#" className="fa fa-envelope"></span> Email </label><br/>
                         <input type = "text" id="email" name="email" required/><br/>
@@ -103,7 +107,6 @@ class Signup extends Component{
                     <h2 className="hrule"><span><em>or Sign Up using </em></span></h2>
                     <a href="#" className="fa fa-google fag"></a>
                     <a href="#" className="fa fa-facebook fab"></a>
-                    <a href="#" className="fa fa-twitter fat"></a>
                   </div>
                   <div className = "haveanaccount">
                     <p><span>Already have an account?</span><strong><a href="/login">Login</a></strong></p>
