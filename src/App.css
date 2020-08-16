@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Dosis", Times, serif;
 }
 
 /* Navbar */
@@ -15,7 +15,7 @@ body {
   font-family: "Dosis", sans-serif;
 }
 .navbar .navbar-toggler {
-  border: 1.5px solid rgba(0,0,0);
+  border: 1.5px solid rgba(0, 0, 0);
 }
 
 .navbar .navbar-brand,
@@ -26,7 +26,7 @@ body {
   font-size: 1.6em;
   text-shadow: 2px 2px 4px #000000;
 }
-.navbar .nav-1 li a span{
+.navbar .nav-1 li a span {
   margin: 0 10px;
   font-size: 1.2em;
   color: #fafafa;
@@ -50,7 +50,9 @@ body {
   background-color: #fafafa;
   border: 1px solid #fafafa;
 }
-
+.vert-align {
+  margin-top: 6rem;
+}
 /* border */
 .bord {
   border: 1px solid #fafafa;
@@ -121,8 +123,8 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #fff;
   padding: 1.5rem;
-  margin-bottom: 5rem;
-  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 2rem;
+  font-family: "Dosis", Times, serif;
 }
 
 .slideshow {
@@ -253,7 +255,7 @@ body {
     line-height: 1.5;
   }
 }
-@media (min-width: 992px) and  (max-width: 1199.98px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
   .home-content p {
     font-size: 1em;
   }
@@ -380,7 +382,7 @@ body {
 .form-inline .form-control.email-field {
   border-radius: 0;
   border: 0;
-  width:250px;
+  width: 250px;
 }
 .email-button {
   border-radius: 0;
@@ -434,7 +436,7 @@ body {
 }
 .tips-point:hover h5 {
   color: #04a4d4;
-  transition: .4s linear;
+  transition: 0.4s linear;
 }
 .tips-point div {
   margin-left: 16px;
@@ -474,17 +476,20 @@ body {
   transform: translateY(-50%);
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .health-section p, .tips-tag, .tips-point div {
+  .health-section p,
+  .tips-tag,
+  .tips-point div {
     font-size: 14px;
     line-height: 1.5;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  .health-section p, .tips-tag, .tips-point div {
+  .health-section p,
+  .tips-tag,
+  .tips-point div {
     font-size: 1em;
   }
 }
-
 
 .section1 {
   margin: 5rem 5rem 3rem 5rem;
@@ -802,6 +807,7 @@ iframe {
   margin-right: 2rem;
   margin-bottom: 2rem;
 }
+
 /* Contact Page */
 
 #contact-a .text-fields {
@@ -855,6 +861,7 @@ iframe {
 /* footer */
 
 #footer {
+  padding-top: 4rem;
   background: #31bbee;
   color: #fff;
   text-align: center;
@@ -1248,16 +1255,22 @@ select:focus {
 }
 
 /* Signup Component*/
-.signuppage{
+.signuppage {
   height: 82rem;
   padding-top: 10rem;
-  background-color: #4158D0;
-  background-image: linear-gradient(43deg, rgb(65, 88, 208,1) 0%, rgb(200, 80, 192,0.5) 46%,rgb(255, 204, 112,0.5) 100%) ,url("/assets/images/usersignup.jpg");
+  background-color: #4158d0;
+  background-image: linear-gradient(
+      43deg,
+      rgb(65, 88, 208, 1) 0%,
+      rgb(200, 80, 192, 0.5) 46%,
+      rgb(255, 204, 112, 0.5) 100%
+    ),
+    url("/assets/images/usersignup.jpg");
   background-position: center;
   background-size: cover;
   font-family: "Dosis", sans-serif;
 }
-.signupimages{
+.signupimages {
   margin: 0rem 25rem 2rem;
   height: 64.5rem;
   background: #ffffff;
@@ -1266,44 +1279,47 @@ select:focus {
   position: relative;
   z-index: 0;
 }
-.doctor, .user{
+.doctor,
+.user {
   min-width: 50%;
   background: #ffffff;
   height: 20%;
   display: inline-block;
   border: none;
 }
-.doctor{
+.doctor {
   padding: 1rem 1rem 0rem 2rem;
 }
-.user{
+.user {
   padding: 1rem 2rem 0rem 1rem;
 }
-.signupform{
+.signupform {
   text-align: left;
   padding: 2rem 2rem 0rem;
 }
-.signupform .signup{
+.signupform .signup {
   color: #5db0ef;
   font-size: 1.2rem;
   text-align: center;
 }
-.namefield{
+.namefield {
   display: block;
 }
-.firstname,.lastname{
+.firstname,
+.lastname {
   display: inline-block;
   width: 45%;
   border: none;
 }
-.emptyspace{
+.emptyspace {
   display: inline-block;
   width: 10%;
 }
-.firstname input,.lastname input{
+.firstname input,
+.lastname input {
   width: 100%;
 }
-.createaccount{
+.createaccount {
   display: block;
   width: 100%;
   border: none;
@@ -1315,25 +1331,36 @@ select:focus {
   font-size: 1.2rem;
   font-weight: 800;
 }
-button .create{
+button .create {
   margin-right: 0.5rem;
 }
-.signupform form{
-margin-top: 2rem;
+.signupform form {
+  margin-top: 2rem;
 }
-.email input, .password input, .confirmpassword input{
+.email input,
+.password input,
+.confirmpassword input {
   display: block;
   width: 100%;
 }
-.firstname input, .lastname input{
+.firstname input,
+.lastname input {
   margin-bottom: 1rem;
 }
-.email label, .password label, .confirmpassword label, .firstname label, .lastname label{
+.email label,
+.password label,
+.confirmpassword label,
+.firstname label,
+.lastname label {
   color: #4d4d4d;
   margin: 0rem;
   font-weight: 800;
 }
-.email input, .password input, .confirmpassword input, .firstname input, .lastname input{
+.email input,
+.password input,
+.confirmpassword input,
+.firstname input,
+.lastname input {
   color: #8c8c8c;
   border-color: #a6a6a6;
   border-width: thin;
@@ -1343,23 +1370,25 @@ margin-top: 2rem;
   border-right: none;
   outline: none;
 }
-.forgotpassword{
+.forgotpassword {
   float: right;
   font-size: 0.9rem;
   margin-bottom: 1.2rem;
   color: #1a1a1a;
 }
-.confirmpassword{
+.confirmpassword {
   margin-bottom: 0rem;
 }
-.openauthentication{
+.openauthentication {
   text-align: center;
   display: block;
 }
-.openauthentication a{
+.openauthentication a {
   text-decoration: none;
 }
-.fag, .fab, .fat{
+.fag,
+.fab,
+.fat {
   padding: 1.5rem;
   border-radius: 100%;
   margin: 1.5rem 1rem 3rem;
@@ -1368,52 +1397,59 @@ margin-top: 2rem;
   text-decoration: none;
 }
 
-.fag a, .fab a, .fat a{
-text-decoration: none;
+.fag a,
+.fab a,
+.fat a {
+  text-decoration: none;
 }
-.fab{
+.fab {
   padding-right: 2rem;
   border-radius: 100%;
 }
 .fab {
-  background: #3B5998;
+  background: #3b5998;
   color: white;
 }
-.fat{
-  background: #55ACEE;
+.fat {
+  background: #55acee;
   color: white;
 }
 .fag {
   background: #dd4b39;
   color: white;
 }
-.fab:hover{
+.fab:hover {
   background: #324b81;
   color: white;
 }
-.fag:hover{
+.fag:hover {
   background: #c43421;
   color: white;
 }
-.fat:hover{
+.fat:hover {
   background: #178de8;
   color: white;
 }
-.signupicon, .createaccount,.fag, .fat, .fab{
+.signupicon,
+.createaccount,
+.fag,
+.fat,
+.fab {
   -webkit-box-shadow: 0.3em 0.4em 0.5em #cccccc;
   -moz-box-shadow: 0.3em 0.4em 0.5em #cccccc;
   box-shadow: 0.3em 0.4em 0.5em #cccccc;
 }
-.haveanaccount{
+.haveanaccount {
   text-align: center;
 }
-.haveanaccount span{
+.haveanaccount span {
   margin-right: 0.25rem;
 }
-.haveanaccount p{
+.haveanaccount p {
   margin-bottom: 0rem;
 }
-.forgotpassword a, .haveanaccount a{
+.forgotpassword a,
+.haveanaccount a {
   text-decoration: none;
 }
 .hrule {
@@ -1433,7 +1469,7 @@ text-decoration: none;
 .hrule span em {
   color: #a6a6a6;
 }
-.doctoption{
+.doctoption {
   height: 100%;
   width: 100%;
   background: url("/assets/images/doctor.jpg");
@@ -1444,7 +1480,7 @@ text-decoration: none;
   text-align: center;
   padding-top: 4rem;
 }
-.useroption{
+.useroption {
   height: 100%;
   width: 100%;
   background: url("/assets/images/patient.jpg");
@@ -1455,25 +1491,29 @@ text-decoration: none;
   text-align: center;
   padding-top: 4rem;
 }
-.signupheading{
+.signupheading {
   text-align: center;
   padding-top: 3rem;
   padding-bottom: 1.5rem;
   color: #5db0ef;
 }
-.doctoption:hover,.useroption:hover{
+.doctoption:hover,
+.useroption:hover {
   opacity: 0.7;
 }
-.doctoption span, .useroption span{
+.doctoption span,
+.useroption span {
   font-size: 1.5rem;
   color: #5db0ef;
   font-weight: bold;
   visibility: hidden;
 }
-.doctoption:hover span, .useroption:hover span{
+.doctoption:hover span,
+.useroption:hover span {
   visibility: visible;
 }
-.useroption:hover, .doctoption:hover{
+.useroption:hover,
+.doctoption:hover {
   transform: scale(1.1);
 }
 .signupicon {
@@ -1494,93 +1534,235 @@ text-decoration: none;
   background: -webkit-linear-gradient(to right, #0067e6, #00b4e6);
   background: linear-gradient(to right, #0067e6, #00b4e6);
 }
-@media(min-width: 0px) and (max-width: 330px){
-  .signuppage{
+@media (min-width: 0px) and (max-width: 330px) {
+  .signuppage {
     height: 105rem;
   }
-  .signupimages{
+  .signupimages {
     margin: 0rem 1rem 2rem;
     height: 90rem;
   }
-  .fag, .fab, .fat{
+  .fag,
+  .fab,
+  .fat {
     padding: 1rem;
     margin: 1.5rem 0.1rem 4rem;
   }
-  .fab{
+  .fab {
     padding-right: 1.5rem;
   }
-  .doctor{
+  .doctor {
     display: block;
     padding: 1rem 2.5rem 1rem 2.5rem;
   }
-  .user{
+  .user {
     display: block;
     padding: 1rem 2rem 1rem 2rem;
   }
 }
-@media(min-width: 331px) and (max-width: 415px){
-  .signupimages{
+@media (min-width: 331px) and (max-width: 415px) {
+  .signupimages {
     margin: 0rem 1rem 2rem;
     height: 67rem;
   }
-  .fag, .fab, .fat{
+  .fag,
+  .fab,
+  .fat {
     padding: 1.5rem;
     margin: 1.5rem 0.5rem 4rem;
   }
-  .fab{
+  .fab {
     padding-right: 2rem;
   }
 }
-@media(min-width: 416px) and (max-width: 500px){
-  .signupimages{
+@media (min-width: 416px) and (max-width: 500px) {
+  .signupimages {
     margin: 0rem 3rem 2rem;
     height: 67rem;
   }
-  .fag, .fab, .fat{
+  .fag,
+  .fab,
+  .fat {
     padding: 1.5rem;
     margin: 1.5rem 0.4rem 4rem;
   }
-  .fab{
+  .fab {
     padding-right: 2rem;
   }
 }
-@media(min-width: 501px) and (max-width: 551px){
-  .signupimages{
+@media (min-width: 501px) and (max-width: 551px) {
+  .signupimages {
     margin: 0rem 2rem 2rem;
     height: 64rem;
   }
 }
-@media(min-width: 552px) and (max-width: 710px){
-  .signupimages{
+@media (min-width: 552px) and (max-width: 710px) {
+  .signupimages {
     margin: 0rem 5rem 2rem;
     height: 65rem;
   }
 }
-@media(min-width: 711px) and (max-width: 1022px){
-  .signupimages{
+@media (min-width: 711px) and (max-width: 1022px) {
+  .signupimages {
     margin: 0rem 10rem 2rem;
     height: 65rem;
   }
 }
-@media(min-width: 1023px) and (max-width: 1200px){
-  .signuppage{
+@media (min-width: 1023px) and (max-width: 1200px) {
+  .signuppage {
     height: 90rem;
   }
-  .signupimages{
+  .signupimages {
     margin: 2rem 18rem 5rem;
     height: 66rem;
   }
-  .signupicon{
-      margin: 6rem auto -4.2rem;
+  .signupicon {
+    margin: 6rem auto -4.2rem;
   }
 }
-.signuprule{
+.signuprule {
   border-width: 0.5rem;
   border-style: dotted;
   border-bottom: none;
-  border-color:#e6e6e6;
+  border-color: #e6e6e6;
   width: 15%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+#team p {
+  color: #fff;
+  /* background: #fff; */
+  /* padding: 60px 0; */
+}
+.para {
+  text-align: center;
+}
+#team .member {
+  text-align: center;
+  /* margin-bottom: 20px; */
+
+  /* position: relative; */
+}
+
+#team .member img {
+  padding-bottom: 2rem;
+}
+#team .member .member-info {
+  opacity: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.2s;
+}
+
+#team .member .member-info-content {
+  margin-top: -50px;
+  transition: margin 0.2s;
+}
+
+#team .member:hover .member-info {
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  transition: 0.4s;
+}
+
+#team .member:hover .member-info-content {
+  margin-top: 0;
+  transition: margin 0.4s;
+}
+
+#team .member h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+  color: #fff;
+}
+
+#team .member span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+  color: #fff;
+}
+
+#team .member .social {
+  margin-top: 15px;
+}
+
+#team .member .social a {
+  transition: none;
+  color: #fff;
+}
+
+#team .member .social a:hover {
+  color: #18d26e;
+}
+
+#team .member .social i {
+  font-size: 18px;
+  margin: 0 10px;
+}
+.section-header p {
+  text-align: center;
+  padding-bottom: 20px;
+  color: #333;
+}
+
+.about-tab .nav-tabs {
+  border: none;
+  padding: 20px;
+  display: block;
+  text-align: center;
+}
+.about-tab .nav-tabs > li {
+  margin: 0px;
+  display: inline-block;
+  text-align: center;
+  float: none;
+}
+
+.about-tab .nav-pills > li a {
+  border-radius: 2px;
+  border: none;
+  background: #72afc2;
+  color: #fff;
+  border: 0.1px solid #000;
+}
+
+.about-tab .nav-pills > li a:hover {
+  color: #ffffff;
+  background: #111111;
+  border: none;
+}
+.about-tab .nav-pills > li > a.active {
+  border: none;
+  background: #015353;
+  color: #ffffff;
+}
+
+.about-tab .tab-content > .tab-pane {
+  padding: 20px 20px 20px 0;
+  text-align: center;
+}
+.about-tab .tab-content > .tab-pane ul li {
+  display: inline-block;
+  margin: 0px 10px;
+}
+.about-tab .tab-content > .tab-pane ul li i {
+  margin-right: 10px;
 }

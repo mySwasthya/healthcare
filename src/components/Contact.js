@@ -7,7 +7,7 @@ class Contact extends Component {
       <div>
         <div className="vert-align">
           <section id="contact-a" className="text-center py-3">
-            <div className="container">
+            <div className="container contact-container">
               <div id="contact-slide">
                 <h2 className="section-title">Contact Us</h2>
                 <div className="bottom-line"></div>
