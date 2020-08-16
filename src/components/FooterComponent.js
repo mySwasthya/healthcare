@@ -30,12 +30,17 @@ function Footer(props) {
             </li>
             <li>
               <Link className="nav-link col" to="/menu">
-                Menu
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-link col" to="/health">
+                Health
               </Link>
             </li>
             <li>
               <Link className="nav-link col" to="/services">
-                Services
+                Contact
               </Link>
             </li>
           </ul>

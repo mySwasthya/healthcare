@@ -14,33 +14,15 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isNavOpen: false,
-      active1: "",
-      active2: "",
-      active3: "",
-      active4: ""
+      isNavOpen: false
     };
 
     this.toggleNav = this.toggleNav.bind(this);
-    this.toggleActive = this.toggleActive.bind(this);
   }
   toggleNav() {
     this.setState({
       isNavOpen: !this.state.isNavOpen
     });
-  }
-
-  toggleActive(num) {
-    if(num === 1)
-      this.setState({ active1: "active", active2: "", active3: "", active4: ""});
-    else if (num === 2)
-      this.setState({ active1: "", active2: "active", active3: "", active4: ""});
-    else if (num === 3)
-      this.setState({ active1: "", active2: "", active3: "active", active4: ""});
-    else if (num === 4)
-      this.setState({ active1: "", active2: "", active3: "", active4: "active"});
-    else
-      this.setState({ active1: "", active2: "", active3: "", active4: "" });
   }
 
   render() {
@@ -56,22 +38,27 @@ class Header extends Component {
               <Nav className="ml-auto nav-1" navbar>
                 <NavItem>
                   <NavLink className="nav-link" to="/home">
-                    <span className={this.state.active1} onClick={() => this.toggleActive(1)}>Home</span>
+                    <span className={document.location.pathname == '/home' && "active "}>Home</span>
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink className="nav-link" to="/aboutus">
-                    <span className={this.state.active2} onClick={() => this.toggleActive(2)}>About us</span>
+                    <span className={document.location.pathname == '/aboutus' && "active "}>About us</span>
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink className="nav-link" to="/services">
-                    <span className={this.state.active3} onClick={() => this.toggleActive(3)}>Services</span>
+                    <span className={document.location.pathname == '/services' && "active "}>Services</span>
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="nav-link" to="/health">
+                    <span className={document.location.pathname == '/health' && "active "}>Health</span>
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink className="nav-link" to="/contact">
-                    <span className={this.state.active4} onClick={() => this.toggleActive(4)}>Contact</span>
+                    <span className={document.location.pathname == '/contact' && "active "}>Contact</span>
                   </NavLink>
                 </NavItem>
               </Nav>

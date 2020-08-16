@@ -38,7 +38,7 @@ body {
 .navbar .nav-1 li a span:hover {
   border-color: #fafafa;
 }
-.navbar .nav-1 li .active {
+.navbar .nav-1 li .active span {
   border-color: #fff;
 }
 .nav-item button {
@@ -201,10 +201,6 @@ body {
 .img-home:hover {
   opacity: 0.9;
 }
-.img-home #landing-header {
-  padding-top: 30vh;
-}
-
 .home-section {
   margin: 3% 7.5%;
   text-align: center;
@@ -240,9 +236,6 @@ body {
   text-align: center;
   font-size: 1.2em;
   line-height: 1.8;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 .img-height {
   min-height: 100%;
