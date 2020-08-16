@@ -55,7 +55,7 @@ class Signup extends Component{
                     <form action = "" method = "POST">
                       <div className = "namefield">
                         <div className = "firstname">
-                          <label><span href="#" class="fa fa-user"></span> First Name </label><br/>
+                          <label><span href="#" className="fa fa-user"></span> First Name </label><br/>
                           <input type = "text" required/>
                         </div>
                       <span className = "emptyspace"></span>
@@ -65,28 +65,27 @@ class Signup extends Component{
                         </div>
                       </div>
                       <div className = "email">
-                        <label><span href="#" class="fa fa-envelope"></span> Email </label><br/>
+                        <label><span href="#" className="fa fa-envelope"></span> Email </label><br/>
                         <input type = "text" required/><br/>
                       </div>
                       <div className = "password">
-                        <label><span href="#" class="fa fa-lock"></span>  Password </label><br/>
+                        <label><span href="#" className="fa fa-lock"></span>  Password </label><br/>
                         <input type = "password" required/><br/>
                       </div>
                       <div className = "confirmpassword">
-                        <label><span href="#" class="fa fa-lock"></span>  Confirm Password </label><br/>
+                        <label><span href="#" className="fa fa-lock"></span>  Confirm Password </label><br/>
                         <input type = "password" required/>
                       </div>
-                      <div className="forgotpassword">Forgot <strong><a href="#">Password?</a></strong></div>
-                        <button type = "submit" class = "btn btn-primary createaccount"><span className="create">Create</span> Account</button>
+                      <button type = "submit" className="btn btn-primary createaccount mt-4"><span className="create">Create</span> Account</button>
                   </form>
-                  <div class = "openauthentication">
+                  <div className = "openauthentication">
                     <h2 className="hrule"><span><em>or Sign Up using </em></span></h2>
-                    <a href="#" class="fa fa-google fag"></a>
-                    <a href="#" class="fa fa-facebook fab"></a>
-                    <a href="#" class="fa fa-twitter fat"></a>
+                    <a href="#" className="fa fa-google fag"></a>
+                    <a href="#" className="fa fa-facebook fab"></a>
+                    <a href="#" className="fa fa-twitter fat"></a>
                   </div>
                   <div className = "haveanaccount">
-                    <p><span>Already have an account?</span><strong><a href="#">Login</a></strong></p>
+                    <p><span>Already have an account?</span><strong><a href="/login">Login</a></strong></p>
                   </div>
                   </div>
                   </div>
