@@ -8,7 +8,7 @@ import About from './AboutComponent';
 import Signup from './SignupCpnt';
 import Services from './Services';
 import Health from './Health';
-import Login from './Login';
+import Login from './LoginComponent';
 
 class Main extends Component {
   render() {

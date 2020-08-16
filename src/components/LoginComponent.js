@@ -37,36 +37,34 @@ class Signup extends Component {
     return (
       <div>
         <Header />
-        <div className="signuppage">
-          <div className="signupicon">
+        <div className="loginpage">
+          <div className="loginicon">
             <h3>
-              <span className="fa fa-sigin-in"></span>
+              <span className="fas fa-sign-in-alt"></span>
             </h3>
           </div>
-          <div className="signupimages">
-            <div className="signupheading">
-              <h3>
-                <strong>Choose Account Type</strong>
-              </h3>
+          <div className="loginimages">
+            <div className="loginheading">
+              <h3><strong><p><h2><strong>Welcome back!</strong></h2></p><p>Choose Account Type</p></strong></h3>
             </div>
-            <div className="doctor">
+            <div className="doctorlogin">
               <div
-                className={"doctoption " + this.state.activeDoctor}
+                className={"doctoptionlogin " + this.state.activeDoctor}
                 onClick={this.displayDoctorText}
               >
                 <span>Doctor</span>
               </div>
             </div>
-            <div className="user">
+            <div className="userlogin">
               <div
-                className={"useroption " + this.state.activeUser}
+                className={"useroptionlogin " + this.state.activeUser}
                 onClick={this.displayUserText}
               >
                 <span>User</span>
               </div>
             </div>
-            <div className="signupform">
-              <div className="signup">
+            <div className="loginform">
+              <div className="login">
                 <strong>
                   {" "}
                   {this.state.isStarted
@@ -78,9 +76,9 @@ class Signup extends Component {
                     : null}{" "}
                 </strong>
               </div>
-              <hr className="signuprule" />
+              <hr className="loginrule" />
               <form action="" method="POST">
-                <div className="email">
+                <div className="emaillogin">
                   <label>
                     <span href="#" className="fa fa-envelope"></span> Email{" "}
                   </label>
@@ -88,13 +86,12 @@ class Signup extends Component {
                   <input type="text" required />
                   <br />
                 </div>
-                <div className="password">
+                <div className="passwordlogin">
                   <label>
                     <span href="#" className="fa fa-lock"></span> Password{" "}
                   </label>
                   <br />
                   <input type="password" required />
-                  <br />
                 </div>
                 <div className="forgotpassword">
                   Forgot{" "}
@@ -102,21 +99,21 @@ class Signup extends Component {
                     <a href="#">Password?</a>
                   </strong>
                 </div>
-                <button type="submit" class="btn btn-primary createaccount">
+                <button type="submit" class="btn btn-primary loginaccount">
                   <span className="create">Login</span>
                 </button>
               </form>
-              <div className="openauthentication">
-                <h2 className="hrule">
+              <div className="openauthenticationlogin">
+                <h2 className="hrulelogin">
                   <span>
                     <em>or Login using </em>
                   </span>
                 </h2>
-                <a href="#" className="fa fa-google fag"></a>
-                <a href="#" className="fa fa-facebook fab"></a>
-                <a href="#" className="fa fa-twitter fat"></a>
+                <a href="#" className="fa fa-google faglogin"></a>
+                <a href="#" className="fa fa-facebook fablogin"></a>
+                <a href="#" className="fa fa-twitter fatlogin"></a>
               </div>
-              <div className="haveanaccount">
+              <div className="donthaveanaccount">
                 <p>
                   <span>Dont't have an account?</span>
                   <strong>

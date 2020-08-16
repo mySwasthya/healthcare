@@ -41,7 +41,7 @@ class Signup extends Component{
               </div>
               <div className = "doctor">
                   <div className = {"doctoption " + this.state.activeDoctor}  onClick = {this.displayDoctorText}>
-                      <span>Doctor</span> 
+                      <span>Doctor</span>
                   </div>
               </div>
               <div className = "user">
