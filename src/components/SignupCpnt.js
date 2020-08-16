@@ -5,7 +5,7 @@ import Footer from "./FooterComponent";
 class Signup extends Component{
   constructor(props){
     super(props);
-    this.state = {isDoctorClicked: true, isUserClicked: false, isStarted: true};
+    this.state = {isDoctorClicked: true, isUserClicked: false, isStarted: true, activeDoctor: "", activeUser: ""};
     this.displayDoctorText = this.displayDoctorText.bind(this);
     this.displayUserText = this.displayUserText.bind(this);
   }
@@ -13,14 +13,18 @@ class Signup extends Component{
     this.setState(state => ({
       isDoctorClicked: true,
       isUserClicked: false,
-      isStarted: false
+      isStarted: false,
+      activeDoctor: "active-form",
+      activeUser: ""
     }));
   }
   displayUserText(){
-    this.setState(state => ({
+    this.setState((state) => ({
       isUserClicked: true,
       isDoctorClicked: false,
-      isStarted: false
+      isStarted: false,
+      activeDoctor: "",
+      activeUser: "active-form",
     }));
   }
   render(){
@@ -36,13 +40,13 @@ class Signup extends Component{
                   <h3><strong>Choose Account Type</strong></h3>
               </div>
               <div className = "doctor">
-                  <div className = "doctoption" onClick = {this.displayDoctorText}>
-                      <span>Doctor</span>
+                  <div className = {"doctoption " + this.state.activeDoctor}  onClick = {this.displayDoctorText}>
+                      <span>Doctor</span> 
                   </div>
               </div>
               <div className = "user">
-                  <div className = "useroption" onClick = {this.displayUserText}>
-                    <span>Patient</span>
+                  <div className = {"useroption " + this.state.activeUser} onClick = {this.displayUserText}>
+                    <span>User</span>
                   </div>
               </div>
               <div className = "signupform">
