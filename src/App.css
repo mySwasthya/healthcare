@@ -483,132 +483,6 @@ body {
     font-size: 1em;
   }
 }
-
-.section1 {
-  margin: 5rem 5rem 3rem 5rem;
-  min-width: 60%;
-  height: 40rem;
-  background-color: #f2f2f2;
-  display: inline-block;
-  text-align: center;
-  position: relative;
-  z-index: 0;
-}
-.section1 form {
-  padding: 1.5em 2.5em 2.5em;
-  text-align: left;
-}
-.section1 form label {
-  color: #a6a6a6;
-  margin-bottom: 0rem;
-}
-.section1 form input {
-  border: 0.1em solid #a6a6a6;
-  border-top: 0em;
-  border-left: 0em;
-  border-right: 0em;
-  outline: none;
-  line-height: 0.5rem;
-  color: #8c8c8c;
-  background-color: #f2f2f2;
-  margin-bottom: 2rem;
-  width: 100%;
-}
-.createbutton {
-  width: 100%;
-  display: block;
-  font-size: 1.1rem;
-  border-radius: 0.2rem;
-  border: none;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 1rem;
-  background: #00c6ff;
-  background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
-  background: linear-gradient(to right, #0072ff, #00c6ff);
-}
-.createbutton:hover {
-  background: -webkit-linear-gradient(to right, #0067e6, #00b4e6);
-  background: linear-gradient(to right, #0067e6, #00b4e6);
-}
-.fbbutton a,
-.googlebtn a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.fbbutton,
-.googlebtn {
-  width: 100%;
-  display: block;
-  font-size: 1.1rem;
-  border-radius: 0.2rem;
-  border: none;
-  font-weight: 500;
-  text-align: center;
-  padding-left: 1rem;
-  background: linear-gradient(#4b6cb7, #182848);
-  color: #ffffff;
-}
-.fbbutton {
-  margin-top: 3rem;
-}
-
-.fbbutton:hover {
-  background: linear-gradient(#496ab6, #132039);
-}
-.googlebtn:hover {
-  background: linear-gradient(#e62a19, #c52407);
-}
-.hrule {
-  width: 100%;
-  text-align: center;
-  border-bottom: 0.05em solid #a6a6a6;
-  line-height: 0.05em;
-  margin: 0.5rem auto 1.5rem;
-}
-.hrule span {
-  background: #f2f2f2;
-  padding: 0 10px;
-  font-size: 0.56em;
-  font-weight: normal;
-  font-family: Tahoma, Geneva, sans-serif;
-}
-.hrule span em {
-  color: #a6a6a6;
-}
-
-.googlebtn {
-  background: linear-gradient(#e73827, #dd2808);
-}
-.fa-facebook,
-.fa-google {
-  text-align: center;
-}
-
-.fbbutton,
-.googlebtn,
-#usersignupicon,
-.createbutton,
-.section1 {
-  -webkit-box-shadow: 0.3em 0.4em 0.5em #333333;
-  -moz-box-shadow: 0.3em 0.4em 0.5em #333333;
-  box-shadow: 0.3em 0.4em 0.5em #333333;
-}
-
-.image {
-  width: 40%;
-  background: url("/assets/images/userform.jpg");
-  background-size: cover;
-  background-position: center;
-  float: left;
-  height: 100%;
-}
-.userform {
-  width: 60%;
-  float: right;
-}
-
 #landing-header {
   z-index: 1;
   position: relative;
@@ -677,93 +551,6 @@ body {
   }
   30% {
     opacity: 0;
-  }
-}
-
-/* --------------------User Login---------------------------------*/
-#userbackground {
-  background: url("/assets/images/usersignup.jpg");
-  padding-top: 3rem;
-  padding-bottom: 5rem;
-  text-align: center;
-}
-
-#socialbuttons {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-}
-
-#facebookbtn {
-  margin-bottom: 1.5rem;
-}
-#googlebutton {
-  margin-bottom: 2.5rem;
-}
-
-#fb,
-#ge {
-  margin-left: 1em;
-  font-family: Tahoma, Geneva, sans-serif;
-  font-weight: 500;
-}
-
-#usersignupicon {
-  margin: 1rem auto 0rem;
-  border-radius: 100%;
-  text-align: center;
-  padding: 1rem 0.5rem 1rem 1rem;
-  background: #00c6ff;
-  background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
-  background: linear-gradient(to right, #0072ff, #00c6ff);
-  color: #ffffff;
-  width: 5rem;
-  height: 5rem;
-}
-#usersignupicon span {
-  padding-top: 0.6rem;
-}
-
-#haveaccount {
-  font-size: 0.9em;
-  text-align: center;
-}
-#haveaccount strong {
-  margin-left: 0.4em;
-  text-decoration: none;
-}
-#haveaccount a {
-  text-decoration: none;
-  color: #1a75ff;
-}
-
-@media (min-width: 0px) and (max-width: 768px) {
-  .section1 {
-    min-width: 80%;
-    margin: 5rem 0rem 3rem;
-  }
-  .userform {
-    width: 100%;
-  }
-  .image {
-    width: 0%;
-  }
-  .section1 form {
-    padding: 1.5em 1em 2.5em;
-  }
-  #socialbuttons {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-}
-@media (min-width: 769px) and (max-width: 914px) {
-  .section1 {
-    min-width: 80%;
-  }
-}
-
-@media (max-width: 768px) {
-  .health-quote {
-    margin-left: 0%;
   }
 }
 
@@ -1249,9 +1036,8 @@ select:focus {
 
 /* Signup Component*/
 .signuppage {
-  height: 82rem;
+  height: 86rem;
   padding-top: 10rem;
-  background-color: #4158d0;
   background-image: linear-gradient(
       43deg,
       rgb(65, 88, 208, 1) 0%,
@@ -1265,7 +1051,7 @@ select:focus {
 }
 .signupimages {
   margin: 0rem 25rem 2rem;
-  height: 64.5rem;
+  height: 67.5rem;
   background: #ffffff;
   border: none;
   border-radius: 0.5rem;
@@ -1321,6 +1107,7 @@ select:focus {
   background: linear-gradient(to right, #0072ff, #00c6ff);
   border-radius: 2rem;
   margin-bottom: 2rem;
+  margin-top: 1.5rem;
   font-size: 1.2rem;
   font-weight: 800;
 }
@@ -1332,19 +1119,17 @@ button .create {
 }
 .email input,
 .password input,
-.confirmpassword input {
+.confirmpassword input,
+.username input {
   display: block;
   width: 100%;
-}
-.firstname input,
-.lastname input {
-  margin-bottom: 1rem;
 }
 .email label,
 .password label,
 .confirmpassword label,
 .firstname label,
-.lastname label {
+.lastname label,
+.username label {
   color: #4d4d4d;
   margin: 0rem;
   font-weight: 800;
@@ -1353,7 +1138,8 @@ button .create {
 .password input,
 .confirmpassword input,
 .firstname input,
-.lastname input {
+.lastname input,
+.username input {
   color: #8c8c8c;
   border-color: #a6a6a6;
   border-width: thin;
@@ -1362,12 +1148,6 @@ button .create {
   border-left: none;
   border-right: none;
   outline: none;
-}
-.forgotpassword {
-  float: right;
-  font-size: 0.9rem;
-  margin-bottom: 1.2rem;
-  color: #1a1a1a;
 }
 .confirmpassword {
   margin-bottom: 0rem;
@@ -1379,6 +1159,13 @@ button .create {
 .openauthentication a {
   text-decoration: none;
 }
+.active-form {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+.active-form span {
+  visibility: visible;
+}
 .fag,
 .fab,
 .fat {
@@ -1389,7 +1176,6 @@ button .create {
   text-align: center;
   text-decoration: none;
 }
-
 .fag a,
 .fab a,
 .fat a {
@@ -1428,9 +1214,9 @@ button .create {
 .fag,
 .fat,
 .fab {
-  -webkit-box-shadow: 0.3em 0.4em 0.5em #cccccc;
-  -moz-box-shadow: 0.3em 0.4em 0.5em #cccccc;
-  box-shadow: 0.3em 0.4em 0.5em #cccccc;
+  -webkit-box-shadow: 0.3em 0.4em 0.5em #333333;
+  -moz-box-shadow: 0.3em 0.4em 0.5em #333333;
+  box-shadow: 0.3em 0.4em 0.5em #333333;
 }
 .haveanaccount {
   text-align: center;
@@ -1441,7 +1227,6 @@ button .create {
 .haveanaccount p {
   margin-bottom: 0rem;
 }
-.forgotpassword a,
 .haveanaccount a {
   text-decoration: none;
 }
@@ -1536,24 +1321,27 @@ button .create {
 }
 @media (min-width: 0px) and (max-width: 330px) {
   .signuppage {
-    height: 105rem;
+    height: 117rem;
   }
   .signupimages {
     margin: 0rem 1rem 2rem;
-    height: 90rem;
+    height: 100rem;
   }
   .fag,
-  .fab,
-  .fat {
+  .fab {
     padding: 1rem;
-    margin: 1.5rem 0.1rem 4rem;
+    margin: 1.5rem 1rem 4rem;
   }
   .fab {
     padding-right: 1.5rem;
   }
+  .signupheading {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   .doctor {
     display: block;
-    padding: 1rem 2.5rem 1rem 2.5rem;
+    padding: 1rem 2rem 1rem 2rem;
   }
   .user {
     display: block;
@@ -1561,30 +1349,34 @@ button .create {
   }
 }
 @media (min-width: 331px) and (max-width: 415px) {
+  .signuppage {
+    height: 90rem;
+  }
   .signupimages {
     margin: 0rem 1rem 2rem;
-    height: 67rem;
+    height: 71rem;
   }
   .fag,
-  .fab,
-  .fat {
+  .fab {
     padding: 1.5rem;
-    margin: 1.5rem 0.5rem 4rem;
+    margin: 1.5rem 1rem 4rem;
   }
   .fab {
     padding-right: 2rem;
   }
 }
 @media (min-width: 416px) and (max-width: 500px) {
+  .signuppage {
+    height: 90rem;
+  }
   .signupimages {
     margin: 0rem 3rem 2rem;
-    height: 67rem;
+    height: 71rem;
   }
   .fag,
-  .fab,
-  .fat {
+  .fab {
     padding: 1.5rem;
-    margin: 1.5rem 0.4rem 4rem;
+    margin: 1.5rem 1rem 4rem;
   }
   .fab {
     padding-right: 2rem;
@@ -1593,31 +1385,55 @@ button .create {
 @media (min-width: 501px) and (max-width: 551px) {
   .signupimages {
     margin: 0rem 2rem 2rem;
-    height: 64rem;
+    height: 68rem;
   }
 }
 @media (min-width: 552px) and (max-width: 710px) {
   .signupimages {
     margin: 0rem 5rem 2rem;
-    height: 65rem;
+    height: 69rem;
   }
 }
-@media (min-width: 711px) and (max-width: 1022px) {
+@media (min-width: 711px) and (max-width: 840px) {
   .signupimages {
     margin: 0rem 10rem 2rem;
-    height: 65rem;
+    height: 69rem;
   }
 }
-@media (min-width: 1023px) and (max-width: 1200px) {
+@media (min-width: 841px) and (max-width: 886px) {
+  .signupimages {
+    margin: 0rem 12rem 2rem;
+    height: 69rem;
+  }
+}
+@media (min-width: 887px) and (max-width: 960px) {
+  .signupimages {
+    margin: 0rem 15rem 2rem;
+    height: 69rem;
+  }
+}
+@media (min-width: 960px) and (max-width: 1022px) {
+  .signupimages {
+    margin: 0rem 15rem 2rem;
+    height: 69rem;
+  }
+}
+@media (min-width: 1023px) and (max-width: 1105px) {
   .signuppage {
-    height: 90rem;
+    height: 92rem;
   }
   .signupimages {
-    margin: 2rem 18rem 5rem;
-    height: 66rem;
+    margin: 0rem 18rem 5rem;
+    height: 69rem;
   }
   .signupicon {
-    margin: 6rem auto -4.2rem;
+    margin: 2rem auto -2.2rem;
+  }
+}
+@media (min-width: 1106px) and (max-width: 1200px) {
+  .signupimages {
+    margin: 0rem 22rem 2rem;
+    height: 69rem;
   }
 }
 .signuprule {
@@ -1765,4 +1581,413 @@ button .create {
 }
 .about-tab .tab-content > .tab-pane ul li i {
   margin-right: 10px;
+}
+.errors {
+  color: red;
+  font-weight: bold;
+  width: 100%;
+}
+
+/* Login Component */
+.loginpage {
+  height: 80rem;
+  padding-top: 10rem;
+  background-image: linear-gradient(
+      43deg,
+      rgb(65, 88, 208, 1) 0%,
+      rgb(200, 80, 192, 0.5) 46%,
+      rgb(255, 204, 112, 0.5) 100%
+    ),
+    url("/assets/images/usersignup.jpg");
+  background-position: center;
+  background-size: cover;
+  font-family: "Dosis", sans-serif;
+}
+.loginimages {
+  margin: 0rem 25rem 2rem;
+  height: 58rem;
+  background: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  position: relative;
+  z-index: 0;
+}
+.doctorlogin,
+.userlogin {
+  min-width: 50%;
+  background: #ffffff;
+  height: 20%;
+  display: inline-block;
+  border: none;
+}
+.doctorlogin {
+  padding: 1rem 1rem 0rem 2rem;
+}
+.userlogin {
+  padding: 1rem 2rem 0rem 1rem;
+}
+.loginform {
+  text-align: left;
+  padding: 2rem 2rem 0rem;
+}
+.loginform .login {
+  color: #00c6ff;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.emptyspace {
+  display: inline-block;
+  width: 10%;
+}
+.loginaccount {
+  display: block;
+  width: 100%;
+  border: none;
+  background: #00c6ff;
+  background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  color: #ffffff;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+.loginform form {
+  margin-top: 2rem;
+}
+.emaillogin input,
+.passwordlogin input {
+  display: block;
+  width: 100%;
+  background: #ffffff;
+  color: #ffffff;
+}
+.emaillogin label,
+.passwordlogin label {
+  color: #4d4d4d;
+  margin: 0rem;
+  font-weight: 800;
+}
+.emaillogin input,
+.passwordlogin input {
+  color: #8c8c8c;
+  border-color: #a6a6a6;
+  border-width: thin;
+  height: 1.5rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
+.forgotpassword {
+  float: right;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  margin-top: 0.2rem;
+  color: #4d4d4d;
+}
+.openauthenticationlogin {
+  text-align: center;
+  display: block;
+}
+.openauthenticationlogin a {
+  text-decoration: none;
+}
+.loginicon,
+.faglogin,
+.fatlogin,
+.fablogin,
+.loginimages,
+.loginaccount {
+  -webkit-box-shadow: 0.3em 0.4em 0.5em #333333;
+  -moz-box-shadow: 0.3em 0.4em 0.5em #333333;
+  box-shadow: 0.3em 0.4em 0.5em #333333;
+}
+.donthaveanaccount {
+  text-align: center;
+}
+.donthaveanaccount span {
+  margin-right: 0.25rem;
+}
+.donthaveanaccount p {
+  margin-bottom: 0rem;
+}
+.forgotpassword a,
+.donthaveanaccount a {
+  text-decoration: none;
+}
+.doctoptionlogin {
+  height: 100%;
+  width: 100%;
+  background: url("/assets/images/doctor.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.4rem;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  padding-top: 4rem;
+}
+.useroptionlogin {
+  height: 100%;
+  width: 100%;
+  background: url("/assets/images/user.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.4rem;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  padding-top: 4rem;
+}
+.loginheading {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  color: #00c6ff;
+}
+.loginheading p {
+  margin-bottom: 0rem;
+}
+.doctoptionlogin:hover,
+.useroptionlogin:hover {
+  opacity: 0.7;
+}
+.doctoptionlogin span,
+.useroptionlogin span {
+  font-size: 1.5rem;
+  color: #5db0ef;
+  font-weight: bold;
+  visibility: hidden;
+}
+.doctoptionlogin:hover span,
+.useroptionlogin:hover span {
+  visibility: visible;
+}
+.useroptionlogin:hover,
+.doctoptionlogin:hover {
+  transform: scale(1.1);
+}
+.loginicon {
+  margin: 0rem auto -2.2rem;
+  border-radius: 100%;
+  text-align: center;
+  padding: 1.5rem 0.5rem 1rem 1rem;
+  background: #00c6ff;
+  background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  color: #ffffff;
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  z-index: 1;
+}
+.loginaccount:hover {
+  background: -webkit-linear-gradient(to right, #0067e6, #00b4e6);
+  background: linear-gradient(to right, #0067e6, #00b4e6);
+}
+.faglogin,
+.fablogin,
+.fatlogin {
+  padding: 1.5rem;
+  border-radius: 100%;
+  margin: 1.5rem 1rem 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+}
+.faglogin a,
+.fablogin a,
+.fatlogin a {
+  text-decoration: none;
+}
+.fablogin {
+  padding-right: 2rem;
+  border-radius: 100%;
+}
+.fablogin {
+  background: #3b5998;
+  color: white;
+}
+.fatlogin {
+  background: #178de8;
+  color: white;
+}
+.faglogin {
+  background: #dd4b39;
+  color: white;
+}
+.fablogin:hover {
+  background: #324b81;
+  color: white;
+}
+.faglogin:hover {
+  background: #c43421;
+  color: white;
+}
+.fatlogin:hover {
+  background: #157fd1;
+  color: white;
+}
+@media (min-width: 0px) and (max-width: 315px) {
+  .loginpage {
+    height: 100rem;
+  }
+  .loginimages {
+    margin: 0rem 1rem 2rem;
+    height: 80rem;
+  }
+  .doctorlogin {
+    display: block;
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  .userlogin {
+    display: block;
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  .faglogin,
+  .fablogin,
+  .fatlogin {
+    padding: 1rem;
+    margin: 1.5rem 0.1rem 4rem;
+  }
+  .fablogin {
+    padding-right: 1.5rem;
+  }
+}
+@media (min-width: 316px) and (max-width: 330px) {
+  .loginpage {
+    height: 100rem;
+  }
+  .loginimages {
+    margin: 0rem 1rem 2rem;
+    height: 78rem;
+  }
+  .doctorlogin {
+    display: block;
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  .userlogin {
+    display: block;
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  .faglogin,
+  .fablogin,
+  .fatlogin {
+    padding: 1rem;
+    margin: 1.5rem 0.1rem 4rem;
+  }
+  .fablogin {
+    padding-right: 1.5rem;
+  }
+}
+@media (min-width: 331px) and (max-width: 415px) {
+  .loginimages {
+    margin: 0rem 1rem 2rem;
+    height: 61rem;
+  }
+  .faglogin,
+  .fablogin,
+  .fatlogin {
+    padding: 1.5rem;
+    margin: 1.5rem 0.5rem 4rem;
+  }
+  .fablogin {
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 416px) and (max-width: 500px) {
+  .loginimages {
+    margin: 0rem 3rem 2rem;
+    height: 60rem;
+  }
+  .faglogin,
+  .fablogin,
+  .fatlogin {
+    padding: 1.5rem;
+    margin: 1.5rem 0.4rem 4rem;
+  }
+  .fablogin {
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 501px) and (max-width: 551px) {
+  .loginimages {
+    margin: 0rem 2rem 2rem;
+    height: 57rem;
+  }
+}
+@media (min-width: 552px) and (max-width: 710px) {
+  .loginimages {
+    margin: 0rem 5rem 2rem;
+    height: 59em;
+  }
+}
+@media (min-width: 711px) and (max-width: 800px) {
+  .loginimages {
+    margin: 0rem 10rem 2rem;
+    height: 57rem;
+  }
+}
+@media (min-width: 801px) and (max-width: 900px) {
+  .loginimages {
+    margin: 0rem 12rem 2rem;
+    height: 57rem;
+  }
+}
+@media (min-width: 901px) and (max-width: 1022px) {
+  .loginimages {
+    margin: 0rem 15rem 2rem;
+    height: 57rem;
+  }
+}
+@media (min-width: 1023px) and (max-width: 1200px) {
+  .loginpage {
+    height: 82rem;
+    padding-top: 5rem;
+  }
+  .loginimages {
+    margin: 0rem 18rem 5rem;
+    height: 58rem;
+  }
+  .loginicon {
+    margin: 6rem auto -2.2rem;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1276px) {
+  .loginpage {
+    height: 82rem;
+    padding-top: 5rem;
+  }
+  .loginimages {
+    height: 57.5rem;
+  }
+  .loginicon {
+    margin: 6rem auto -2.2rem;
+  }
+}
+.loginrule {
+  border-width: 0.5rem;
+  border-style: dotted;
+  border-bottom: none;
+  border-color: #e6e6e6;
+  width: 15%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hrulelogin {
+  width: 100%;
+  text-align: center;
+  border-bottom: 0.05em solid #a6a6a6;
+  line-height: 0.05em;
+  margin: 1.5rem auto 1.5rem;
+}
+.hrulelogin span {
+  background: #ffffff;
+  padding: 0 10px;
+  font-size: 0.46em;
+  font-weight: normal;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+.hrulelogin span em {
+  color: #a6a6a6;
 }

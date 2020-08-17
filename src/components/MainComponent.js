@@ -1,14 +1,14 @@
-import React, {Component}  from 'react';
+import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import Header from './HeaderComponent';
-import Carousel from './Carousel';
-import Home from './Home';
-import Contact from './Contact';
-import About from './AboutComponent';
-import Signup from './SignupCpnt';
-import Services from './Services';
-import Health from './Health';
-import Login from './Login';
+import Header from "./HeaderComponent";
+import Carousel from "./Carousel";
+import Home from "./Home";
+import Contact from "./Contact";
+import About from "./AboutComponent";
+import Signup from "./SignupCpnt";
+import Services from "./Services";
+import Health from "./Health";
+import Login from "./LoginComponent";
 
 class Main extends Component {
   render() {
