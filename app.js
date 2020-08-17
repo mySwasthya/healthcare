@@ -2,8 +2,11 @@
 const express = require("express"),
   bodyParser = require("body-parser"),
   mongoose = require("mongoose"),
+  cors = require("cors"),
   passport = require("passport"),
   LocalStrategy = require("passport-local"),
+  bcrypt = require("bcryptjs"),
+  flash = require("connect-flash"),
   session = require("express-session"),
   cookieParser = require("cookie-parser"),
   methodOverride = require("method-override"),
@@ -37,20 +40,21 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(express.static(path.join(__dirname + "/public")));
 app.use(methodOverride("_method"));
 app.use(logger("dev"));
+app.use(flash());
 
 app.use(cors({
   origin: "http://localhost:3000",
   credentials: true
 }));
 
+app.use(cookieParser("Secret Key"));
 app.use(
   session({
-    secret: "This is a Healthcare Project for India 217831889474973",
-    resave: false,
-    saveUninitialized: false,
+    secret: "Secret Key",
+    resave: true,
+    saveUninitialized: true,
   })
 );
-app.use(cookieParser("This is a Healthcare Project for India 217831889474973"));
 
 //Authentication
 app.use(passport.initialize());
@@ -58,9 +62,9 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-passport.use(new LocalStrategy(Doctor.authenticate()));
-passport.serializeUser(Doctor.serializeUser());
-passport.deserializeUser(Doctor.deserializeUser());
+// passport.use(new LocalStrategy(Doctor.authenticate()));
+// passport.serializeUser(Doctor.serializeUser());
+// passport.deserializeUser(Doctor.deserializeUser());
 
 //This middleware will make currentUser, flash success and error available to all templates
 app.use(function (req, res, next) {

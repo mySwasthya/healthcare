@@ -2,18 +2,23 @@ import React, { Component } from "react";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 
-class Signup extends Component {
+class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isDoctorClicked: true,
+      isDoctorClicked: false,
       isUserClicked: false,
       isStarted: true,
       activeDoctor: "",
       activeUser: "",
+      email: "",
+      password: "",
+      fetchError: ""
     };
     this.displayDoctorText = this.displayDoctorText.bind(this);
     this.displayUserText = this.displayUserText.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
   displayDoctorText() {
     this.setState((state) => ({
@@ -22,6 +27,7 @@ class Signup extends Component {
       isStarted: false,
       activeDoctor: "active-form",
       activeUser: "",
+      fetchError: ""
     }));
   }
   displayUserText() {
@@ -31,8 +37,86 @@ class Signup extends Component {
       isStarted: false,
       activeDoctor: "",
       activeUser: "active-form",
+      fetchError: ""
     }));
   }
+
+  handleInputChange(event) {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    });
+  }
+
+  handleSubmit(event) {
+    var url = "";
+    if(this.state.isDoctorClicked === false && this.state.isUserClicked === false) {
+      this.setState({fetchError: "Please select Doctor/User"});
+      event.preventDefault();
+      return;
+    }
+    else if(this.state.isDoctorClicked === true) {
+      var url = "login_doctor";
+    }
+    else {
+      var url = "login_user";
+    }
+
+    const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/;
+
+    if((this.state.email === "") || (!emailPattern.test(this.state.email))) {
+      this.setState({ fetchError: "No User Exists" });
+      event.preventDefault();
+      return;
+    }
+    else if((this.state.password === "") || (this.state.password.length < 8) || (this.state.password.length > 32) || (!passwordPattern.test(this.state.password))) {
+      this.setState({ fetchError: "Incorrect Password" });
+      event.preventDefault();
+      return;
+    }
+
+    const loginUser = {email: this.state.email, password: this.state.password};
+    fetch("http://localhost:3001/" + url, {
+      method: "POST",
+      body: JSON.stringify(loginUser),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "same-origin"
+    })
+      .then(
+        (response) => {
+          if (response.ok) {
+            return response;
+          } else {
+            var error = new Error(
+              "Error " + response.status + ": " + response.statusText
+            );
+            error.response = response;
+            throw error;
+          }
+        },
+        (error) => {
+          var errMess = new Error(error.message);
+          throw errMess;
+        }
+      )
+      .then((response) => response.json())
+      .then((res) => {
+        if(res.error) {
+          this.setState({fetchError: res.error})
+        } else {
+          this.props.history.push("/home");
+        }
+      })
+      .catch((error) => {
+        this.setState({fetchError: "Login Failed! Please try again in a moment"});
+      });
+      
+      event.preventDefault();
+  }
+
   render() {
     return (
       <div>
@@ -45,7 +129,16 @@ class Signup extends Component {
           </div>
           <div className="loginimages">
             <div className="loginheading">
-              <h3><strong><p><h2><strong>Welcome back!</strong></h2></p><p>Choose Account Type</p></strong></h3>
+              <h3>
+                <strong>
+                  <p>
+                    <h2>
+                      <strong>Welcome back!</strong>
+                    </h2>
+                  </p>
+                  <p>Choose Account Type</p>
+                </strong>
+              </h3>
             </div>
             <div className="doctorlogin">
               <div
@@ -77,21 +170,22 @@ class Signup extends Component {
                 </strong>
               </div>
               <hr className="loginrule" />
-              <form action="" method="POST">
+              <div className="error">{this.state.fetchError}</div>
+              <form onSubmit={this.handleSubmit}>
                 <div className="emaillogin">
-                  <label>
+                  <label htmlFor="email">
                     <span href="#" className="fa fa-envelope"></span> Email{" "}
                   </label>
                   <br />
-                  <input type="text" required />
+                  <input type="text" id="email" name="email" value={this.state.email} onChange={this.handleInputChange} />
                   <br />
                 </div>
                 <div className="passwordlogin">
-                  <label>
+                  <label htmlFor="password">
                     <span href="#" className="fa fa-lock"></span> Password{" "}
                   </label>
                   <br />
-                  <input type="password" required />
+                  <input type="password" id="password" name="password" value={this.state.password} onChange={this.handleInputChange} />
                 </div>
                 <div className="forgotpassword">
                   Forgot{" "}
@@ -129,4 +223,4 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+export default Login;

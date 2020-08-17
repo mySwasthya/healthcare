@@ -1582,10 +1582,15 @@ button .create {
 .about-tab .tab-content > .tab-pane ul li i {
   margin-right: 10px;
 }
-.errors {
+.error, .errors {
   color: red;
+  font-size: 1.25em;
   font-weight: bold;
   width: 100%;
+}
+.error {
+  text-align: center;
+  font-size: 1.25em;
 }
 
 /* Login Component */
