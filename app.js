@@ -5,6 +5,7 @@ const express = require("express"),
   passport = require("passport"),
   LocalStrategy = require("passport-local"),
   session = require("express-session"),
+  cookieParser = require("cookie-parser"),
   methodOverride = require("method-override"),
   logger = require("morgan"),
   request = require("request"),
@@ -33,17 +34,23 @@ mongoose
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname + "/public")));
+// app.use(express.static(path.join(__dirname + "/public")));
 app.use(methodOverride("_method"));
-
 app.use(logger("dev"));
+
+app.use(cors({
+  origin: "http://localhost:3000",
+  credentials: true
+}));
+
 app.use(
-  require("express-session")({
+  session({
     secret: "This is a Healthcare Project for India 217831889474973",
     resave: false,
     saveUninitialized: false,
   })
 );
+app.use(cookieParser("This is a Healthcare Project for India 217831889474973"));
 
 //Authentication
 app.use(passport.initialize());
