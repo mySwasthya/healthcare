@@ -9,7 +9,7 @@ import Signup from "./SignupCpnt";
 import Services from "./Services";
 import Health from "./Health";
 import Login from "./LoginComponent";
-import Appointment from './Appointment'
+import Appointment from './Appointment';
 
 class Main extends Component {
   render() {

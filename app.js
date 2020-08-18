@@ -17,9 +17,6 @@ const express = require("express"),
   User = require("./models/user"),
   Doctor = require("./models/doctor");
 
-//requiring routes
-const indexRoutes = require("./routes/index");
-
 const app = express();
 
 // Default Values
@@ -40,6 +37,7 @@ mongoose
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(express.static(path.join(__dirname + "/public")));
 app.use(methodOverride("_method"));
 app.use(logger("dev"));
 app.use(flash());
@@ -49,12 +47,12 @@ app.use(cors({
   credentials: true
 }));
 
-app.use(cookieParser(""));
+app.use(cookieParser("Secret Key"));
 app.use(
   session({
-    secret: "Secret-Key",
-    resave: true,
-    saveUninitialized: true,
+    secret: "Secret Key",
+    resave: false,
+    saveUninitialized: false,
   })
 );
 
@@ -68,11 +66,15 @@ passport.deserializeUser(User.deserializeUser());
 // passport.serializeUser(Doctor.serializeUser());
 // passport.deserializeUser(Doctor.deserializeUser());
 
-//This middleware will make currentUser available to all templates
+//This middleware will make currentUser, flash success and error available to all templates
 app.use(function (req, res, next) {
+  // console.log("req.session", req.session);
   res.locals.currentUser = req.user;
   next();
 });
+
+//requiring routes
+const indexRoutes = require("./routes/index");
 
 //Routes
 app.use("/", indexRoutes);

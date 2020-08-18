@@ -135,17 +135,17 @@ class Signup extends Component {
   }
 
   handleSubmit(event) {
-    var url = "";
+    let url = "";
     if(this.state.isDoctorClicked === false && this.state.isUserClicked === false) {
       this.setState({fetchError: "Please select Doctor/User"});
       event.preventDefault();
       return;
     }
     else if(this.state.isDoctorClicked === true) {
-      var url = "register_doctor";
+      url = "register_doctor";
     }
     else {
-      var url = "register_user";
+      url = "register_user";
     }
     const registerUser = {firstname: this.state.firstname, lastname: this.state.lastname, username: this.state.username, email: this.state.email, password: this.state.password};
     fetch("http://localhost:3001/" + url, {
