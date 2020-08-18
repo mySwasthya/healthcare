@@ -23,7 +23,7 @@ class Header extends Component {
   }
 
   componentDidMount() {
-    const user = localStorage.getItem("user") || localStorage.getItem("doctor") || "";
+    const user = localStorage.getItem("user") || localStorage.getItem("doctor") || null;
     this.setState({currentUser: user});
   }
 
@@ -135,23 +135,35 @@ class Header extends Component {
                   </NavLink>
                 </NavItem>
               </Nav>
-              <Nav className="ml-auto" navbar>
-                {this.state.currentUser === "" ? (
+              {this.state.currentUser === null ? (
+                <Nav className="ml-auto" navbar>
                   <NavItem>
                     <NavLink to="/login">
                       <Button className="mr-3">Login</Button>
                     </NavLink>
+                  </NavItem>
+                  <NavItem>
                     <NavLink to="/signup">
                       <Button>Sign Up</Button>
                     </NavLink>
                   </NavItem>
-                  ) : (
+                </Nav>
+                ) : (
+                <Nav className="ml-auto" navbar>
+                  <NavItem>
+                    <NavLink to='#'>
+                      <div className="username">
+                        <i className="fas fa-user mr-2"></i>
+                        {JSON.parse(this.state.currentUser).username}
+                      </div>
+                    </NavLink>
+                  </NavItem>
                   <NavItem>
                     <Button onClick={(event) => this.logout()}>Log Out</Button>
                   </NavItem>
-                  ) 
-                }
-              </Nav>
+                </Nav>
+                ) 
+              }
             </Collapse>
           </div>
         </Navbar>
