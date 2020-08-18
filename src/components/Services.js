@@ -41,10 +41,12 @@ function Services() {
                   in. Nam eleifend nunc dui, sed cusus justo molestie id.
                   Vestibulum vel sagittis justo.
                 </p>
-                {/* <Button className="btn">
-                  <a href="/">Read More</a>
-                </Button> */}
-                <Button className="mr-3">Book Appointment</Button>
+                <Link to="/appointment">
+                  <Button className="mr-3" color="primary">
+                    Book Appointment
+                  </Button>
+                </Link>
+                {/* <Button className="mr-3">Book Appointment</Button> */}
               </div>
             </div>
           </div>

@@ -641,6 +641,7 @@ iframe {
 /* footer */
 
 #footer {
+  margin-top: 0;
   padding-top: 4rem;
   background: #31bbee;
   color: #fff;
@@ -1582,7 +1583,8 @@ button .create {
 .about-tab .tab-content > .tab-pane ul li i {
   margin-right: 10px;
 }
-.error, .errors {
+.error,
+.errors {
   color: red;
   font-size: 1.25em;
   font-weight: bold;
@@ -2016,4 +2018,59 @@ button .create {
 }
 .service-container #img-service-7 {
   background: url("/assets/images/service-7.jpg") no-repeat center center/cover;
+}
+
+#appoint {
+  background: url("/assets/images/diet.jpg") no-repeat center center/cover;
+
+  line-height: 1.8;
+}
+#appoint-container {
+  margin: 30px auto;
+  max-width: 700px;
+  padding: 20px;
+  opacity: 95%;
+}
+
+.form-wrap {
+  background-color: #ffffff;
+  padding: 15px 25px;
+}
+.form-wrap h1,
+.form-wrap p {
+  text-align: center;
+}
+.form-wrap,
+.form-group {
+  margin: 15px;
+}
+.form-wrap,
+.form-group label {
+  display: block;
+  color: #666;
+}
+.form-wrap,
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: #ddd 1px solid;
+  border-radius: 5px;
+}
+.form-wrap button {
+  display: block;
+  background-color: #49c1a2;
+  width: 91%;
+  margin-left: 14px;
+  margin-right: 14px;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.form-wrap button:hover {
+  background-color: #37a08e;
+}
+.form-wrap .button-text {
+  font-size: 13px;
+  margin-top: 20px;
 }
