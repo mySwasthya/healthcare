@@ -31,10 +31,16 @@ router.post("/register_user", (req, res, next) => {
           await newUser.save();
           req.login(newUser, function (err) {
             if (err) {
-              res.json({"error": "Error in Logging In"});
+              res.status(400).send({ error: "Error in Logging In" });
             }
-            console.log(req.user);
-            res.json(req.user);
+            req.session.user = req.user;
+            res.locals.currentUser = req.user;
+            const user = {
+              id: req.user._id,
+              username: req.user.username,
+            };
+            console.log(user);
+            res.status(200).send({ user: user });
           });    
         }
       });   
@@ -90,9 +96,15 @@ router.post("/register_doctor", (req, res, next) => {
           await newDoctor.save();
           req.login(newDoctor, function (err) {
             if (err) {
-              res.json({ error: "Error in Logging In" });
+              res.status(400).send({ error: "Error in Logging In" });
             }
-            res.json({ success: "Successfully Signed In" });
+            req.session.user = req.user;
+            res.locals.currentUser = req.user;
+            const doctor = {
+              id: req.user._id,
+              username: req.user.username,
+            };
+            res.status(200).send({ doctor: doctor });
           });
         }
       });

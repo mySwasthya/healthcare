@@ -152,7 +152,7 @@ class Header extends Component {
                 <Nav className="ml-auto" navbar>
                   <NavItem>
                     <NavLink to='#'>
-                      <div className="username">
+                      <div className="username-header">
                         <i className="fas fa-user mr-2"></i>
                         {JSON.parse(this.state.currentUser).username}
                       </div>

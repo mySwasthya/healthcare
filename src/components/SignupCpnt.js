@@ -19,6 +19,7 @@ class Signup extends Component {
       password: "",
       confirmpassword: "",
       fetchError: "",
+      currentUser: null,
       touched: {
         firstname: false,
         lastname: false,
@@ -159,7 +160,7 @@ class Signup extends Component {
       .then(
         (response) => {
           if (response.ok) {
-            return response;
+            return response.json();
           } else {
             var error = new Error(
               "Error " + response.status + ": " + response.statusText
@@ -173,11 +174,20 @@ class Signup extends Component {
           throw errMess;
         }
       )
-      .then((response) => response.json())
-      .then((res) => {
-        if(res.error) {
-          this.setState({fetchError: res.error})
-        } else {
+      .then((data) => {
+        if(data.error) {
+          this.setState({fetchError: data.error})
+        }
+        else if(data.user) {
+          this.setState({currentUser: data.user});
+          localStorage.setItem("user", JSON.stringify(this.state.currentUser));
+          alert("Successfully Signed in as User");
+          this.props.history.push("/home");
+        }
+        else if(data.doctor) {
+          this.setState({ currentUser: data.doctor });
+          localStorage.setItem("doctor", JSON.stringify(this.state.currentUser));
+          alert("Successfully Signed in as Doctor");
           this.props.history.push("/home");
         }
       })

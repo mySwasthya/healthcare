@@ -4,6 +4,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `yarn dev-server`
+
+Runs the server in the background using nodemon<br />
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
+
+The server will restart if you make edits but t will not effect the frontend.<br />
+You will also see any server errors in the console.
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />

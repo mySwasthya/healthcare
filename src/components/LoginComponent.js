@@ -105,18 +105,19 @@ class Login extends Component {
         }
       )
       .then((data) => {
-        console.log(data);
         if(data.error) {
           this.setState({fetchError: data.error})
         }
         else if(data.user) {
           this.setState({currentUser: data.user});
           localStorage.setItem("user", JSON.stringify(this.state.currentUser));
+          alert("Successfully Logged in as User");
           this.props.history.push("/home");
         }
         else if(data.doctor) {
           this.setState({ currentUser: data.doctor });
           localStorage.setItem("doctor", JSON.stringify(this.state.currentUser));
+          alert("Successfully Logged in as Doctor");
           this.props.history.push("/home");
         }
       })

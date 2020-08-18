@@ -50,7 +50,7 @@ body {
   background-color: #fafafa;
   border: 1px solid #fafafa;
 }
-.username {
+.username-header {
   font-size: 1.25em;
   padding: 4px 8px;
   margin-right: 12px;
@@ -893,9 +893,6 @@ iframe {
   align-self: left;
 }
 
-.mah-white {
-  color: #f4f4f4;
-}
 /* .service-btn {
   border-radius: 0;
   text-transform: uppercase;
