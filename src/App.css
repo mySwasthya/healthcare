@@ -884,6 +884,9 @@ iframe {
   align-self: left;
 }
 
+.mah-white {
+  color: #f4f4f4;
+}
 /* .service-btn {
   border-radius: 0;
   text-transform: uppercase;
