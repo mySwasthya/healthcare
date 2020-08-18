@@ -33,7 +33,8 @@ router.post("/register_user", (req, res, next) => {
             if (err) {
               res.json({"error": "Error in Logging In"});
             }
-            res.json({"success": "Successfully Signed In"});
+            console.log(req.user);
+            res.json(req.user);
           });    
         }
       });   
@@ -42,21 +43,26 @@ router.post("/register_user", (req, res, next) => {
 });
 router.post("/login_user", (req, res) => {
   User.findOne({ email: req.body.email }, (err, user) => {
-    if (err) res.json({ error: "Error! Please Try Again" });
-    if (!user) res.json({ error: "No User Exists" });
+    if (err) res.status(400).send({ error: "Error! Please Try Again" });
+    if (!user) res.status(404).send({ error: "No User Exists" });
     if(user) {
       bcrypt.compare(req.body.password, user.password, (err, result) => {
-        if (err) res.json({ error: "Error in Logging In" });
+        if (err) res.status(400).send({ error: "Error in Logging In" });
         if (result === true) {
           req.login(user, function (err) {
             if (err) {
-              res.json({ error: "Error in Logging In" });
+              res.status(400).send({ error: "Error in Logging In" });
             }
-            console.log(req.user);
-            res.json({ success: "Successfully Logged In" });
+            req.session.user = req.user;
+            res.locals.currentUser = req.user;
+            const user = {
+              id: req.user._id,
+              username: req.user.username,
+            };
+            res.status(200).send({ user: user });
           });
         } else {
-          res.json({ error: "Incorrect Password" });
+          res.status(400).send({ error: "Incorrect Password" });
         }
       });
     }
@@ -95,35 +101,48 @@ router.post("/register_doctor", (req, res, next) => {
 });
 router.post("/login_doctor", (req, res) => {
   Doctor.findOne({ email: req.body.email }, (err, doctor) => {
-    if (err) res.json({ error: "Error! Please Try Again" });
-    if (!doctor) res.json({ error: "No User Exists" });
+    if (err) res.status(400).send({ error: "Error! Please Try Again" });
+    if (!doctor) res.status(404).send({ error: "User does not exist" });
     if (doctor) {
       bcrypt.compare(req.body.password, doctor.password, (err, result) => {
-        if (err) res.json({ error: "Error in Logging In" });
+        if (err) res.status(400).send({ error: "Error in Logging In" });
         if (result === true) {
           req.login(doctor, function (err) {
             if (err) {
-              res.json({ error: "Error in Logging In" });
+              res.status(400).send({ error: "Error in Logging In" });
             }
-            res.json({ success: "Successfully Logged in" });
+            req.session.user = req.user;
+            res.locals.currentUser = req.user;
+            const doctor = {
+              id: req.user._id,
+              username: req.user.username,
+            };
+            res.status(200).send({ doctor: doctor });
           });
         } else {
-          res.json({ error: "Incorrect Password" });
+          res.status(400).send({ error: "Incorrect Password" });
         }
       });
     }
   });
 });
 
-router.get("/user", (req, res) => {
-  console.log(req.user)
-  console.log(res.locals.currentUser);
-  // if (req.user) {
-    
-  // } else {
-  //   res.json("Not logged In");
-  // }
-  res.json(req.user);
+router.get("/logout", function (req, res) {
+  req.logout();
+  res.status(200).send({ success: "Success" });
 });
+
+// router.get("/user", (req, res) => {
+//   if (res.locals.currentUser) {
+//     const user = {
+//       id: res.locals.currentUser._id,
+//       username: res.locals.currentUser.username
+//     }
+//     console.log(user);
+//     res.status(200).send({success: user});
+//   } else {
+//     res.send({error: "Not logged In"});
+//   }
+// });
 
 module.exports = router;

@@ -21,6 +21,7 @@ class Login extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
   displayDoctorText() {
     this.setState((state) => ({
       isDoctorClicked: true,
@@ -50,17 +51,17 @@ class Login extends Component {
   }
 
   handleSubmit(event) {
-    var url = "";
+    let url = "";
     if(this.state.isDoctorClicked === false && this.state.isUserClicked === false) {
       this.setState({fetchError: "Please select Doctor/User"});
       event.preventDefault();
       return;
     }
     else if(this.state.isDoctorClicked === true) {
-      var url = "login_doctor";
+      url = "login_doctor";
     }
     else {
-      var url = "login_user";
+      url = "login_user";
     }
 
     const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
@@ -89,7 +90,7 @@ class Login extends Component {
       .then(
         (response) => {
           if (response.ok) {
-            return response;
+            return response.json();
           } else {
             var error = new Error(
               "Error " + response.status + ": " + response.statusText
@@ -103,46 +104,55 @@ class Login extends Component {
           throw errMess;
         }
       )
-      .then((response) => response.json())
-      .then((res) => {
-        if(res.error) {
-          this.setState({fetchError: res.error})
+      .then((data) => {
+        console.log(data);
+        if(data.error) {
+          this.setState({fetchError: data.error})
         }
-        // else {
-        //   this.props.history.push("/home");
-        // }
+        else if(data.user) {
+          this.setState({currentUser: data.user});
+          localStorage.setItem("user", JSON.stringify(this.state.currentUser));
+          this.props.history.push("/home");
+        }
+        else if(data.doctor) {
+          this.setState({ currentUser: data.doctor });
+          localStorage.setItem("doctor", JSON.stringify(this.state.currentUser));
+          this.props.history.push("/home");
+        }
       })
       .catch((error) => {
         this.setState({fetchError: "Login Failed! Please try again in a moment"});
       });
 
-      fetch("http://localhost:3001/user")
-        .then(
-          (response) => {
-            if (response.ok) {
-              return response;
-            } else {
-              var error = new Error(
-                "Error " + response.status + ": " + response.statusText
-              );
-              error.response = response;
-              throw error;
-            }
-          },
-          (error) => {
-            var errMess = new Error(error.message);
-            throw errMess;
-          }
-        )
-        .then((response) => response.json())
-        .then((res) => {
-          this.setState({ currentUser: res });
-          console.log(res);
-        })
-        .catch((error) => {
-          alert("Error: " + error);
-        });
-      
+      // fetch("http://localhost:3001/user")
+      //   .then(
+      //     (response) => {
+      //       if (response.ok) {
+      //         return response.json();
+      //       } else {
+      //         var error = new Error(
+      //           "Error " + response.status + ": " + response.statusText
+      //         );
+      //         error.response = response;
+      //         throw error;
+      //       }
+      //     },
+      //     (error) => {
+      //       var errMess = new Error(error.message);
+      //       throw errMess;
+      //     }
+      //   )
+      //   .then((data) => {
+      //     console.log(data);
+      //     if (data.error) {
+      //       this.setState({ currentUser: data.success });
+      //       localStorage.setItem("user", JSON.parse(this.state.currentUser));
+      //     }
+      //   })
+      //   .catch((error) => {
+      //     console.log("Error: " + error);
+      //   });
+
       event.preventDefault();
   }
 

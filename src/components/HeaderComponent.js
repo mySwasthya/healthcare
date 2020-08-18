@@ -19,38 +19,53 @@ class Header extends Component {
     };
 
     this.toggleNav = this.toggleNav.bind(this);
+    this.logout = this.logout.bind(this);
   }
+
+  componentDidMount() {
+    const user = localStorage.getItem("user") || localStorage.getItem("doctor") || "";
+    this.setState({currentUser: user});
+  }
+
   toggleNav() {
     this.setState({
       isNavOpen: !this.state.isNavOpen,
     });
   }
-
-  componentDidMount() {
-    // fetch("http://localhost:3001/user")
-    //   .then(
-    //     (response) => {
-    //       if (response.ok) {
-    //         return response;
-    //       } else {
-    //         var error = new Error(
-    //           "Error " + response.status + ": " + response.statusText
-    //         );
-    //         error.response = response;
-    //         throw error;
-    //       }
-    //     },
-    //     (error) => {
-    //       var errMess = new Error(error.message);
-    //       throw errMess;
-    //     }
-    //   )
-    //   .then((res) => {
-    //     this.setState({currentUser: res});
-    //   })
-    //   .catch((error) => {
-    //     alert("Error: "+ error);
-    //   });
+  
+  logout(event) {
+    // const url = "";
+    // if(localStorage.getItem("doctor")) {
+    //   url = "logout_doctor";
+    // } else {
+    //   url = "logout_user";  
+    // }
+    fetch("http://localhost:3001/logout")
+      .then(
+          (response) => {
+            if (response.ok) {
+              return response.json();
+            } else {
+              var error = new Error(
+                "Error " + response.status + ": " + response.statusText
+              );
+              error.response = response;
+              throw error;
+            }
+          },
+          (error) => {
+            var errMess = new Error(error.message);
+            throw errMess;
+          }
+        )
+        .then((res) => {
+          console.log(res);
+          this.setState({ currentUser: null });
+        })
+        .catch((error) => {
+          console.log("Error: " + error);
+        });
+    localStorage.clear();
   }
 
   render() {
@@ -121,14 +136,21 @@ class Header extends Component {
                 </NavItem>
               </Nav>
               <Nav className="ml-auto" navbar>
-                <NavItem>
-                  <NavLink to="/login">
-                    <Button className="mr-3">Login</Button>
-                  </NavLink>
-                  <NavLink to="/signup">
-                    <Button>Sign Up</Button>
-                  </NavLink>
-                </NavItem>
+                {this.state.currentUser === "" ? (
+                  <NavItem>
+                    <NavLink to="/login">
+                      <Button className="mr-3">Login</Button>
+                    </NavLink>
+                    <NavLink to="/signup">
+                      <Button>Sign Up</Button>
+                    </NavLink>
+                  </NavItem>
+                  ) : (
+                  <NavItem>
+                    <Button onClick={(event) => this.logout()}>Log Out</Button>
+                  </NavItem>
+                  ) 
+                }
               </Nav>
             </Collapse>
           </div>
