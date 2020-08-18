@@ -13,7 +13,8 @@ class Login extends Component {
       activeUser: "",
       email: "",
       password: "",
-      fetchError: ""
+      fetchError: "",
+      currentUser: null
     };
     this.displayDoctorText = this.displayDoctorText.bind(this);
     this.displayUserText = this.displayUserText.bind(this);
@@ -106,13 +107,41 @@ class Login extends Component {
       .then((res) => {
         if(res.error) {
           this.setState({fetchError: res.error})
-        } else {
-          this.props.history.push("/home");
         }
+        // else {
+        //   this.props.history.push("/home");
+        // }
       })
       .catch((error) => {
         this.setState({fetchError: "Login Failed! Please try again in a moment"});
       });
+
+      fetch("http://localhost:3001/user")
+        .then(
+          (response) => {
+            if (response.ok) {
+              return response;
+            } else {
+              var error = new Error(
+                "Error " + response.status + ": " + response.statusText
+              );
+              error.response = response;
+              throw error;
+            }
+          },
+          (error) => {
+            var errMess = new Error(error.message);
+            throw errMess;
+          }
+        )
+        .then((response) => response.json())
+        .then((res) => {
+          this.setState({ currentUser: res });
+          console.log(res);
+        })
+        .catch((error) => {
+          alert("Error: " + error);
+        });
       
       event.preventDefault();
   }

@@ -27,30 +27,30 @@ class Header extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3001/user")
-      .then(
-        (response) => {
-          if (response.ok) {
-            return response;
-          } else {
-            var error = new Error(
-              "Error " + response.status + ": " + response.statusText
-            );
-            error.response = response;
-            throw error;
-          }
-        },
-        (error) => {
-          var errMess = new Error(error.message);
-          throw errMess;
-        }
-      )
-      .then((res) => {
-        this.setState({currentUser: res});
-      })
-      .catch((error) => {
-        alert("Error: "+ error);
-      });
+    // fetch("http://localhost:3001/user")
+    //   .then(
+    //     (response) => {
+    //       if (response.ok) {
+    //         return response;
+    //       } else {
+    //         var error = new Error(
+    //           "Error " + response.status + ": " + response.statusText
+    //         );
+    //         error.response = response;
+    //         throw error;
+    //       }
+    //     },
+    //     (error) => {
+    //       var errMess = new Error(error.message);
+    //       throw errMess;
+    //     }
+    //   )
+    //   .then((res) => {
+    //     this.setState({currentUser: res});
+    //   })
+    //   .catch((error) => {
+    //     alert("Error: "+ error);
+    //   });
   }
 
   render() {
@@ -68,7 +68,7 @@ class Header extends Component {
                   <NavLink className="nav-link" to="/home">
                     <span
                       className={
-                        document.location.pathname == "/home" ? "active" : ""
+                        document.location.pathname === "/home" ? "active" : ""
                       }
                     >
                       Home
@@ -79,7 +79,7 @@ class Header extends Component {
                   <NavLink className="nav-link" to="/aboutus">
                     <span
                       className={
-                        document.location.pathname == "/aboutus" ? "active" : ""
+                        document.location.pathname === "/aboutus" ? "active" : ""
                       }
                     >
                       About us
@@ -90,7 +90,7 @@ class Header extends Component {
                   <NavLink className="nav-link" to="/services">
                     <span
                       className={
-                        document.location.pathname == "/services" ? "active" :""
+                        document.location.pathname === "/services" ? "active" :""
                       }
                     >
                       Services
@@ -101,7 +101,7 @@ class Header extends Component {
                   <NavLink className="nav-link" to="/health">
                     <span
                       className={
-                        document.location.pathname == "/health" ? "active" :""
+                        document.location.pathname === "/health" ? "active" :""
                       }
                     >
                       Health
@@ -112,7 +112,7 @@ class Header extends Component {
                   <NavLink className="nav-link" to="/contact">
                     <span
                       className={
-                        document.location.pathname == "/contact" ? "active" :""
+                        document.location.pathname === "/contact" ? "active" :""
                       }
                     >
                       Contact

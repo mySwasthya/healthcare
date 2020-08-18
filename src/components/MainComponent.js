@@ -9,6 +9,7 @@ import Signup from "./SignupCpnt";
 import Services from "./Services";
 import Health from "./Health";
 import Login from "./LoginComponent";
+import Appointment from './Appointment'
 
 class Main extends Component {
   render() {
@@ -20,6 +21,7 @@ class Main extends Component {
           <Route exact path="/home" component={Home} />
           <Route exact path="/aboutus" component={About} />
           <Route exact path="/services" component={Services} />
+          <Route path="/appointment" component={Appointment} />
           <Route exact path="/contact" component={Contact} />
           <Route path="/signup" component={Signup} />
           <Route path="/login" component={Login} />
