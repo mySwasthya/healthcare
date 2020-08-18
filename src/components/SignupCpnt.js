@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
+import history from '../history';
 
 class Signup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isDoctorClicked: true,
+      isDoctorClicked: false,
       isUserClicked: false,
       isStarted: true,
       activeDoctor: "",
@@ -17,6 +18,7 @@ class Signup extends Component {
       email: "",
       password: "",
       confirmpassword: "",
+      fetchError: "",
       touched: {
         firstname: false,
         lastname: false,
@@ -24,8 +26,9 @@ class Signup extends Component {
         email: false,
         password: false,
         confirmpassword: false,
-      },
+      }
     };
+
     this.displayDoctorText = this.displayDoctorText.bind(this);
     this.displayUserText = this.displayUserText.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
@@ -41,6 +44,7 @@ class Signup extends Component {
       isStarted: false,
       activeDoctor: "active-form",
       activeUser: "",
+      fetchError: ""
     }));
   }
 
@@ -51,6 +55,7 @@ class Signup extends Component {
       isStarted: false,
       activeDoctor: "",
       activeUser: "active-form",
+      fetchError: ""
     }));
   }
 
@@ -65,12 +70,6 @@ class Signup extends Component {
     this.setState({
       [name]: value,
     });
-  }
-
-  handleSubmit(event) {
-    console.log("Current State is: " + JSON.stringify(this.state));
-    alert("Current State is: " + JSON.stringify(this.state));
-    event.preventDefault();
   }
 
   validate(firstname, lastname, username, email, password, confirmpassword) {
@@ -89,72 +88,103 @@ class Signup extends Component {
     const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/;
 
     if (this.state.touched.firstname && firstname === "")
-      errors.firstname = "First Name is required";
-    else if (
-      this.state.touched.firstname &&
-      (firstname.length < 3 || firstname.length > 12)
-    )
-      errors.firstname = "First Name should be 3-12 characters";
+      errors.firstname = "Required";
+    else if (this.state.touched.firstname && (firstname.length < 2 || firstname.length > 16))
+      errors.firstname = "First Name should be 2-16 characters";
     else if (this.state.touched.firstname && !namePattern.test(firstname))
       errors.firstname = "First Name should only contain letters";
 
     if (this.state.touched.lastname && lastname === "")
-      errors.lastname = "Last Name is required";
-    else if (
-      this.state.touched.lastname &&
-      (lastname.length < 3 || lastname.length > 12)
-    )
-      errors.lastname = "Last Name should be 3-12 characters";
+      errors.lastname = "Required";
+    else if ( this.state.touched.lastname && (lastname.length < 2 || lastname.length > 16))
+      errors.lastname = "Last Name should be 2-16 characters";
     else if (this.state.touched.lastname && !namePattern.test(lastname))
       errors.lastname = "Last Name should only contain letters";
 
     if (this.state.touched.username && username === "")
-      errors.username = "Username is required";
-    else if (
-      this.state.touched.username &&
-      (username.length < 3 || username.length > 12)
-    )
-      errors.username = "Username should be 3-12 characters";
+      errors.username = "Required";
+    else if (this.state.touched.username && (username.length < 2 || username.length > 24))
+      errors.username = "Username should be 2-24 characters";
     else if (this.state.touched.username && !usernamePattern.test(username))
       errors.username = "Username should be alphanumeric";
 
     if (this.state.touched.email && email === "")
-      errors.email = "Email is required";
+      errors.email = "Required";
     else if (this.state.touched.email && !emailPattern.test(email))
       errors.email = "Invalid Email Address";
 
     if (this.state.touched.password && password === "")
-      errors.password = "Password is required";
-    else if (
-      this.state.touched.password &&
-      (password.length < 8 || password.length > 24)
-    )
-      errors.password = "Password should be 8-24 characters";
+      errors.password = "Required";
+    else if (this.state.touched.password && (password.length < 8 || password.length > 32))
+      errors.password = "Password should be 8-32 characters";
     else if (this.state.touched.password && !passwordPattern.test(password))
       errors.password =
         "Password should contain at least one uppercase letter, one lowercase letter, one number and one special character";
 
     if (this.state.touched.confirmpassword && confirmpassword === "")
-      errors.confirmpassword = "Confirm Password is required";
-    else if (
-      this.state.touched.confirmpassword &&
-      (confirmpassword.length < 8 || confirmpassword.length > 24)
-    )
-      errors.confirmpassword = "Password should be 8-24 characters";
-    else if (
-      this.state.touched.confirmpassword &&
-      !passwordPattern.test(confirmpassword)
-    )
+      errors.confirmpassword = "Required";
+    else if (this.state.touched.confirmpassword && (confirmpassword.length < 8 || confirmpassword.length > 32))
+      errors.confirmpassword = "Password should be 8-32 characters";
+    else if (this.state.touched.confirmpassword && !passwordPattern.test(confirmpassword))
       errors.confirmpassword =
         "Password should contain at least one uppercase letter, one lowercase letter, one number and one special character";
-    else if (
-      this.state.touched.password &&
-      this.state.touched.confirmpassword &&
-      password != confirmpassword
-    )
+    else if (this.state.touched.password && this.state.touched.confirmpassword && password != confirmpassword)
       errors.confirmpassword = "Password and Confirm Password should match";
 
     return errors;
+  }
+
+  handleSubmit(event) {
+    var url = "";
+    if(this.state.isDoctorClicked === false && this.state.isUserClicked === false) {
+      this.setState({fetchError: "Please select Doctor/User"});
+      event.preventDefault();
+      return;
+    }
+    else if(this.state.isDoctorClicked === true) {
+      var url = "register_doctor";
+    }
+    else {
+      var url = "register_user";
+    }
+    const registerUser = {firstname: this.state.firstname, lastname: this.state.lastname, username: this.state.username, email: this.state.email, password: this.state.password};
+    fetch("http://localhost:3001/" + url, {
+      method: "POST",
+      body: JSON.stringify(registerUser),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "same-origin"
+    })
+      .then(
+        (response) => {
+          if (response.ok) {
+            return response;
+          } else {
+            var error = new Error(
+              "Error " + response.status + ": " + response.statusText
+            );
+            error.response = response;
+            throw error;
+          }
+        },
+        (error) => {
+          var errMess = new Error(error.message);
+          throw errMess;
+        }
+      )
+      .then((response) => response.json())
+      .then((res) => {
+        if(res.error) {
+          this.setState({fetchError: res.error})
+        } else {
+          this.props.history.push("/home");
+        }
+      })
+      .catch((error) => {
+        this.setState({fetchError: "Sign Up Failed! Please try again in a moment"});
+      });
+      event.preventDefault();
   }
 
   render() {
@@ -211,6 +241,7 @@ class Signup extends Component {
                 </strong>
               </div>
               <hr className="signuprule" />
+              <div className="error">{this.state.fetchError}</div>
               <form onSubmit={this.handleSubmit}>
                 <div className="namefield">
                   <div className="firstname">
@@ -227,7 +258,6 @@ class Signup extends Component {
                       invalid={errors.firstname !== ""}
                       onBlur={this.handleBlur("firstname")}
                       onChange={this.handleInputChange}
-                      required
                     />
                     <div className="errors">{errors.firstname}</div>
                     <br />
@@ -245,7 +275,6 @@ class Signup extends Component {
                       invalid={errors.lastname !== ""}
                       onBlur={this.handleBlur("lastname")}
                       onChange={this.handleInputChange}
-                      required
                     />
                     <div className="errors">{errors.lastname}</div>
                     <br />
@@ -266,7 +295,6 @@ class Signup extends Component {
                     invalid={errors.username !== ""}
                     onBlur={this.handleBlur("username")}
                     onChange={this.handleInputChange}
-                    required
                   />
                   <div className="errors">{errors.username}</div>
                   <br />
@@ -285,7 +313,6 @@ class Signup extends Component {
                     invalid={errors.email !== ""}
                     onBlur={this.handleBlur("email")}
                     onChange={this.handleInputChange}
-                    required
                   />
                   <div className="errors">{errors.email}</div>
                   <br />
@@ -304,7 +331,6 @@ class Signup extends Component {
                     invalid={errors.password !== ""}
                     onBlur={this.handleBlur("password")}
                     onChange={this.handleInputChange}
-                    required
                   />
                   <div className="errors">{errors.password}</div>
                   <br />
@@ -324,7 +350,6 @@ class Signup extends Component {
                     invalid={errors.confirmpassword !== ""}
                     onBlur={this.handleBlur("confirmpassword")}
                     onChange={this.handleInputChange}
-                    required
                   />
                   <div className="errors">{errors.confirmpassword}</div>
                 </div>
