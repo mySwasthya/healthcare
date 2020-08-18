@@ -1991,3 +1991,24 @@ button .create {
 .hrulelogin span em {
   color: #a6a6a6;
 }
+.service-container #img-service-1 {
+  background: url("/assets/images/service-1.jpg") no-repeat center center/cover;
+}
+.service-container #img-service-2 {
+  background: url("/assets/images/service-2.jpg") no-repeat center center/cover;
+}
+.service-container #img-service-3 {
+  background: url("/assets/images/service-3.jpg") no-repeat center center/cover;
+}
+.service-container #img-service-4 {
+  background: url("/assets/images/service-4.jpg") no-repeat center center/cover;
+}
+.service-container #img-service-5 {
+  background: url("/assets/images/service-5.jpg") no-repeat center center/cover;
+}
+.service-container #img-service-6 {
+  background: url("/assets/images/service-6.jpg") no-repeat center center/cover;
+}
+.service-container #img-service-7 {
+  background: url("/assets/images/service-7.jpg") no-repeat center center/cover;
+}

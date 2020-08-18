@@ -9,9 +9,10 @@ function Services() {
       <div className="container service-container">
         <section id="bg-blue" className="row tm-section">
           <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0">
-            <div className="tm-flex-center p-5 tm-bg-color-primary tm-section-min-h">
-              <h1 className="tm-text-color-white tm-site-name">Magazee</h1>
-            </div>
+            <div
+              className="tm-flex-center p-5 tm-bg-color-primary tm-section-min-h "
+              id="img-service-1"
+            ></div>
           </div>
           <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6">
             <div className="tm-flex-center p-5">
@@ -22,6 +23,9 @@ function Services() {
             </div>
             {/* <Button className="btn">
               <a href="/">Read More</a>
+            </Button> */}
+            {/* <Button size="lg" className="button1">
+              <Link to="/Appointment.js">Book Appointment</Link>
             </Button> */}
           </div>
         </section>
@@ -44,30 +48,18 @@ function Services() {
             </div>
           </div>
           <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0">
-            <div className="tm-flex-center p-5 tm-bg-color-primary">
-              <div className="tm-max-w-400 tm-flex-center tm-flex-col">
-                {/* <img src="img/image-04.jpg" alt="Image" className="rounded-circle mb-4"> */}
-                {/* <img
-                  className="img-service"
-                  src="/assets/images/work.jpg"
-                  alt="Medicines Image"
-                  className="img-fluid img-height rounded"
-                  // width="774.6px"
-                  // height="400px"
-                /> */}
-                <p className="tm-text-color-white small tm-font-thin mb-0">
-                  Nullam eleifend, ipsum eu aliquet fermentum , odio urna
-                  dignissim ante, semper maximus libero nisl non nibh.
-                </p>
-              </div>
-            </div>
+            <div
+              className="tm-flex-center p-5 tm-bg-color-primary"
+              id="img-service-2"
+            ></div>
           </div>
         </section>
         <section id="bg-blue" className="row tm-section">
           <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0">
-            <div className="tm-flex-center p-5 tm-bg-color-primary tm-section-min-h">
-              <h1 className="tm-text-color-white tm-site-name">Magazee</h1>
-            </div>
+            <div
+              className="tm-flex-center p-5 tm-bg-color-primary tm-section-min-h"
+              id="img-service-3"
+            ></div>
           </div>
           <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6">
             <div className="tm-flex-center p-5">
@@ -100,30 +92,18 @@ function Services() {
             </div>
           </div>
           <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0">
-            <div className="tm-flex-center p-5 tm-bg-color-primary">
-              <div className="tm-max-w-400 tm-flex-center tm-flex-col">
-                {/* <img src="img/image-04.jpg" alt="Image" className="rounded-circle mb-4"> */}
-                {/* <img
-                  className="img-service"
-                  src="/assets/images/work.jpg"
-                  alt="Medicines Image"
-                  className="img-fluid img-height rounded"
-                  // width="774.6px"
-                  // height="400px"
-                /> */}
-                <p className="tm-text-color-white small tm-font-thin mb-0">
-                  Nullam eleifend, ipsum eu aliquet fermentum , odio urna
-                  dignissim ante, semper maximus libero nisl non nibh.
-                </p>
-              </div>
-            </div>
+            <div
+              className="tm-flex-center p-5 tm-bg-color-primary"
+              id="img-service-4"
+            ></div>
           </div>
         </section>
         <section id="bg-blue" className="row tm-section">
           <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0">
-            <div className="tm-flex-center p-5 tm-bg-color-primary tm-section-min-h">
-              <h1 className="tm-text-color-white tm-site-name">Magazee</h1>
-            </div>
+            <div
+              className="tm-flex-center p-5 tm-bg-color-primary tm-section-min-h"
+              id="img-service-5"
+            ></div>
           </div>
           <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6">
             <div className="tm-flex-center p-5">
@@ -156,54 +136,18 @@ function Services() {
             </div>
           </div>
           <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0">
-            <div className="tm-flex-center p-5 tm-bg-color-primary">
-              <div className="tm-max-w-400 tm-flex-center tm-flex-col">
-                {/* <img src="img/image-04.jpg" alt="Image" className="rounded-circle mb-4"> */}
-                {/* <img
-                  className="img-service"
-                  src="/assets/images/work.jpg"
-                  alt="Medicines Image"
-                  className="img-fluid img-height rounded"
-                  // width="774.6px"
-                  // height="400px"
-                /> */}
-                <p className="tm-text-color-white small tm-font-thin mb-0">
-                  Nullam eleifend, ipsum eu aliquet fermentum , odio urna
-                  dignissim ante, semper maximus libero nisl non nibh.
-                </p>
-              </div>
-            </div>
+            <div
+              className="tm-flex-center p-5 tm-bg-color-primary"
+              id="img-service-6"
+            ></div>
           </div>
         </section>
-        {/* <section className="row tm-section tm-mb-30">
-          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0 text-center">
-            {/* <img src="/assets/images/work.jpg" alt="Image" className="img-fluid"> */}
-        {/* <img
-              src="/assets/images/work.jpg"
-              alt="Medicines Image"
-              className="img-service img-fluid"
-            /> */}
-        {/* </div> */}
-        {/* <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-            <div className="tm-flex-center p-5">
-              <div className="tm-flex-center tm-flex-col">
-                <h2 className="tm-align-left">Loerm ipsum dolor sit amet</h2>
-                <p>
-                  This is one-page HTML5 template that you can use for any
-                  purpose. Please tell your friends about{" "}
-                  <a href="/" target="_parent">
-                    Swasthya
-                  </a>{" "}
-                  website. Thank you.
-                </p>
-                {/* <a href="#" className="service-btn service-btn-primary">
-                  Read More
-        //         </a> 
-          </div>
-        //     </div>
-        //   </div>
-        // </section> */}
+
         <section id="bg-blue" className="row tm-section tm-mb-30">
+          <div
+            className="col-sm-12 col-md-12 col-lg-4 col-xl-4 text-xl-right text-md-center text-center mt-5 mt-lg-0 pr-lg-0"
+            id="img-service-7"
+          ></div>
           <div className="col-sm-12 col-md-12 col-lg-8 col-xl-8">
             <div className="tm-flex-center pl-5 pr-5 pt-5 pb-5">
               <div className="tm-md-flex-center">
@@ -228,16 +172,12 @@ function Services() {
                   aliquet ac pharetra in, suscipit eu risus. Etiam rutrum eros
                   ultrices, consectetur felis ultrices, vehicula purus.
                 </p>
-                <a
-                  href="#"
-                  className="service-btn service-btn-primary float-lg-right tm-md-align-center"
-                >
-                  Read More
-                </a>
+                <Button size="lg" className="button1">
+                  <Link to="/appointment">Book Appointment</Link>
+                </Button>
               </div>
             </div>
           </div>
-          <div className="col-sm-12 col-md-12 col-lg-4 col-xl-4 text-xl-right text-md-center text-center mt-5 mt-lg-0 pr-lg-0"></div>
         </section>
       </div>
       <Footer />
