@@ -13,18 +13,18 @@ router.use(bodyParser.urlencoded({ extended: true }));
 // User Sign Up and Login
 router.post("/register_user", (req, res, next) => {
   User.findOne({ username: req.body.username }, async (err, doc) => {
-    if (err) res.json({"error": "Error! Please Try Again"});
-    if (doc) res.json({"error": "Username Alreday exists"});
+    if (err) res.json({ error: "Error! Please Try Again" });
+    if (doc) res.json({ error: "Username Alreday exists" });
     if (!doc) {
       User.findOne({ email: req.body.email }, async (err, doc) => {
-        if (err) res.json({"error": "Error! Please Try Again"});
-        if (doc) res.json({"error": "Email Already Exists"});
+        if (err) res.json({ error: "Error! Please Try Again" });
+        if (doc) res.json({ error: "Email Already Exists" });
         if (!doc) {
           const hashedPassword = await bcrypt.hash(req.body.password, 10);
           const newUser = new User({
-            firstname: req.body.firstname, 
-            lastname: req.body.lastname,  
-            username: req.body.username, 
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
+            username: req.body.username,
             email: req.body.email,
             password: hashedPassword,
           });
@@ -41,9 +41,9 @@ router.post("/register_user", (req, res, next) => {
             };
             console.log(user);
             res.status(200).send({ user: user });
-          });    
+          });
         }
-      });   
+      });
     }
   });
 });
@@ -51,7 +51,7 @@ router.post("/login_user", (req, res) => {
   User.findOne({ email: req.body.email }, (err, user) => {
     if (err) res.status(400).send({ error: "Error! Please Try Again" });
     if (!user) res.status(404).send({ error: "No User Exists" });
-    if(user) {
+    if (user) {
       bcrypt.compare(req.body.password, user.password, (err, result) => {
         if (err) res.status(400).send({ error: "Error in Logging In" });
         if (result === true) {
@@ -64,6 +64,9 @@ router.post("/login_user", (req, res) => {
             const user = {
               id: req.user._id,
               username: req.user.username,
+              firstname: req.user.firstname,
+              lastname: req.user.lastname,
+              email: req.user.email,
             };
             res.status(200).send({ user: user });
           });
@@ -128,6 +131,9 @@ router.post("/login_doctor", (req, res) => {
             const doctor = {
               id: req.user._id,
               username: req.user.username,
+              firstname: req.user.firstname,
+              lastname: req.user.lastname,
+              email: req.user.email,
             };
             res.status(200).send({ doctor: doctor });
           });
