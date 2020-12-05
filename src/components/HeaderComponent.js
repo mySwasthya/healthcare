@@ -15,7 +15,7 @@ class Header extends Component {
     super(props);
     this.state = {
       isNavOpen: false,
-      currentUser: null
+      currentUser: null,
     };
 
     this.toggleNav = this.toggleNav.bind(this);
@@ -23,8 +23,9 @@ class Header extends Component {
   }
 
   componentDidMount() {
-    const user = localStorage.getItem("user") || localStorage.getItem("doctor") || null;
-    this.setState({currentUser: user});
+    const user =
+      localStorage.getItem("user") || localStorage.getItem("doctor") || null;
+    this.setState({ currentUser: user });
   }
 
   toggleNav() {
@@ -32,39 +33,39 @@ class Header extends Component {
       isNavOpen: !this.state.isNavOpen,
     });
   }
-  
+
   logout(event) {
     // const url = "";
     // if(localStorage.getItem("doctor")) {
     //   url = "logout_doctor";
     // } else {
-    //   url = "logout_user";  
+    //   url = "logout_user";
     // }
     fetch("http://localhost:3001/logout")
       .then(
-          (response) => {
-            if (response.ok) {
-              return response.json();
-            } else {
-              var error = new Error(
-                "Error " + response.status + ": " + response.statusText
-              );
-              error.response = response;
-              throw error;
-            }
-          },
-          (error) => {
-            var errMess = new Error(error.message);
-            throw errMess;
+        (response) => {
+          if (response.ok) {
+            return response.json();
+          } else {
+            var error = new Error(
+              "Error " + response.status + ": " + response.statusText
+            );
+            error.response = response;
+            throw error;
           }
-        )
-        .then((res) => {
-          console.log(res);
-          this.setState({ currentUser: null });
-        })
-        .catch((error) => {
-          console.log("Error: " + error);
-        });
+        },
+        (error) => {
+          var errMess = new Error(error.message);
+          throw errMess;
+        }
+      )
+      .then((res) => {
+        console.log(res);
+        this.setState({ currentUser: null });
+      })
+      .catch((error) => {
+        console.log("Error: " + error);
+      });
     localStorage.clear();
   }
 
@@ -94,7 +95,9 @@ class Header extends Component {
                   <NavLink className="nav-link" to="/aboutus">
                     <span
                       className={
-                        document.location.pathname === "/aboutus" ? "active" : ""
+                        document.location.pathname === "/aboutus"
+                          ? "active"
+                          : ""
                       }
                     >
                       About us
@@ -105,7 +108,9 @@ class Header extends Component {
                   <NavLink className="nav-link" to="/services">
                     <span
                       className={
-                        document.location.pathname === "/services" ? "active" :""
+                        document.location.pathname === "/services"
+                          ? "active"
+                          : ""
                       }
                     >
                       Services
@@ -116,7 +121,7 @@ class Header extends Component {
                   <NavLink className="nav-link" to="/health">
                     <span
                       className={
-                        document.location.pathname === "/health" ? "active" :""
+                        document.location.pathname === "/health" ? "active" : ""
                       }
                     >
                       Health
@@ -127,7 +132,9 @@ class Header extends Component {
                   <NavLink className="nav-link" to="/contact">
                     <span
                       className={
-                        document.location.pathname === "/contact" ? "active" :""
+                        document.location.pathname === "/contact"
+                          ? "active"
+                          : ""
                       }
                     >
                       Contact
@@ -148,10 +155,10 @@ class Header extends Component {
                     </NavLink>
                   </NavItem>
                 </Nav>
-                ) : (
+              ) : (
                 <Nav className="ml-auto" navbar>
                   <NavItem>
-                    <NavLink to='#'>
+                    <NavLink to="/dashboard">
                       <div className="username-header">
                         <i className="fas fa-user mr-2"></i>
                         {JSON.parse(this.state.currentUser).username}
@@ -162,8 +169,7 @@ class Header extends Component {
                     <Button onClick={(event) => this.logout()}>Log Out</Button>
                   </NavItem>
                 </Nav>
-                ) 
-              }
+              )}
             </Collapse>
           </div>
         </Navbar>
