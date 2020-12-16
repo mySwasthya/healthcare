@@ -38,6 +38,9 @@ router.post("/register_user", (req, res, next) => {
             const user = {
               id: req.user._id,
               username: req.user.username,
+              firstname: req.user.firstname,
+              lastname: req.user.lastname,
+              email: req.user.email,
             };
             console.log(user);
             res.status(200).send({ user: user });
@@ -106,6 +109,9 @@ router.post("/register_doctor", (req, res, next) => {
             const doctor = {
               id: req.user._id,
               username: req.user.username,
+              firstname: req.user.firstname,
+              lastname: req.user.lastname,
+              email: req.user.email,
             };
             res.status(200).send({ doctor: doctor });
           });

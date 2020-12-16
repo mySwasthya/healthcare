@@ -62,6 +62,7 @@ class Header extends Component {
       .then((res) => {
         console.log(res);
         this.setState({ currentUser: null });
+        window.location.href = "http://localhost:3000/";
       })
       .catch((error) => {
         console.log("Error: " + error);

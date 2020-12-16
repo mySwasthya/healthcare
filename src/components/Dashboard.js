@@ -10,10 +10,11 @@ class Dashboard extends Component {
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     const user =
       localStorage.getItem("user") || localStorage.getItem("doctor") || null;
-    this.setState({ currentUser: JSON.parse(user) });
+    await this.setState({ currentUser: JSON.parse(user) });
+    console.log(this.state.currentUser);
     if (this.state.currentUser == null) {
       window.location.href = "http://localhost:3000/";
     }

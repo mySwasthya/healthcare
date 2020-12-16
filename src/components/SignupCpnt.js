@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
-import history from '../history';
 
 class Signup extends Component {
   constructor(props) {
@@ -27,7 +26,7 @@ class Signup extends Component {
         email: false,
         password: false,
         confirmpassword: false,
-      }
+      },
     };
 
     this.displayDoctorText = this.displayDoctorText.bind(this);
@@ -45,7 +44,7 @@ class Signup extends Component {
       isStarted: false,
       activeDoctor: "active-form",
       activeUser: "",
-      fetchError: ""
+      fetchError: "",
     }));
   }
 
@@ -56,7 +55,7 @@ class Signup extends Component {
       isStarted: false,
       activeDoctor: "",
       activeUser: "active-form",
-      fetchError: ""
+      fetchError: "",
     }));
   }
 
@@ -90,33 +89,44 @@ class Signup extends Component {
 
     if (this.state.touched.firstname && firstname === "")
       errors.firstname = "Required";
-    else if (this.state.touched.firstname && (firstname.length < 2 || firstname.length > 16))
+    else if (
+      this.state.touched.firstname &&
+      (firstname.length < 2 || firstname.length > 16)
+    )
       errors.firstname = "First Name should be 2-16 characters";
     else if (this.state.touched.firstname && !namePattern.test(firstname))
       errors.firstname = "First Name should only contain letters";
 
     if (this.state.touched.lastname && lastname === "")
       errors.lastname = "Required";
-    else if ( this.state.touched.lastname && (lastname.length < 2 || lastname.length > 16))
+    else if (
+      this.state.touched.lastname &&
+      (lastname.length < 2 || lastname.length > 16)
+    )
       errors.lastname = "Last Name should be 2-16 characters";
     else if (this.state.touched.lastname && !namePattern.test(lastname))
       errors.lastname = "Last Name should only contain letters";
 
     if (this.state.touched.username && username === "")
       errors.username = "Required";
-    else if (this.state.touched.username && (username.length < 2 || username.length > 24))
+    else if (
+      this.state.touched.username &&
+      (username.length < 2 || username.length > 24)
+    )
       errors.username = "Username should be 2-24 characters";
     else if (this.state.touched.username && !usernamePattern.test(username))
       errors.username = "Username should be alphanumeric";
 
-    if (this.state.touched.email && email === "")
-      errors.email = "Required";
+    if (this.state.touched.email && email === "") errors.email = "Required";
     else if (this.state.touched.email && !emailPattern.test(email))
       errors.email = "Invalid Email Address";
 
     if (this.state.touched.password && password === "")
       errors.password = "Required";
-    else if (this.state.touched.password && (password.length < 8 || password.length > 32))
+    else if (
+      this.state.touched.password &&
+      (password.length < 8 || password.length > 32)
+    )
       errors.password = "Password should be 8-32 characters";
     else if (this.state.touched.password && !passwordPattern.test(password))
       errors.password =
@@ -124,12 +134,22 @@ class Signup extends Component {
 
     if (this.state.touched.confirmpassword && confirmpassword === "")
       errors.confirmpassword = "Required";
-    else if (this.state.touched.confirmpassword && (confirmpassword.length < 8 || confirmpassword.length > 32))
+    else if (
+      this.state.touched.confirmpassword &&
+      (confirmpassword.length < 8 || confirmpassword.length > 32)
+    )
       errors.confirmpassword = "Password should be 8-32 characters";
-    else if (this.state.touched.confirmpassword && !passwordPattern.test(confirmpassword))
+    else if (
+      this.state.touched.confirmpassword &&
+      !passwordPattern.test(confirmpassword)
+    )
       errors.confirmpassword =
         "Password should contain at least one uppercase letter, one lowercase letter, one number and one special character";
-    else if (this.state.touched.password && this.state.touched.confirmpassword && password != confirmpassword)
+    else if (
+      this.state.touched.password &&
+      this.state.touched.confirmpassword &&
+      password != confirmpassword
+    )
       errors.confirmpassword = "Password and Confirm Password should match";
 
     return errors;
@@ -137,25 +157,32 @@ class Signup extends Component {
 
   handleSubmit(event) {
     let url = "";
-    if(this.state.isDoctorClicked === false && this.state.isUserClicked === false) {
-      this.setState({fetchError: "Please select Doctor/User"});
+    if (
+      this.state.isDoctorClicked === false &&
+      this.state.isUserClicked === false
+    ) {
+      this.setState({ fetchError: "Please select Doctor/User" });
       event.preventDefault();
       return;
-    }
-    else if(this.state.isDoctorClicked === true) {
+    } else if (this.state.isDoctorClicked === true) {
       url = "register_doctor";
-    }
-    else {
+    } else {
       url = "register_user";
     }
-    const registerUser = {firstname: this.state.firstname, lastname: this.state.lastname, username: this.state.username, email: this.state.email, password: this.state.password};
+    const registerUser = {
+      firstname: this.state.firstname,
+      lastname: this.state.lastname,
+      username: this.state.username,
+      email: this.state.email,
+      password: this.state.password,
+    };
     fetch("http://localhost:3001/" + url, {
       method: "POST",
       body: JSON.stringify(registerUser),
       headers: {
         "Content-Type": "application/json",
       },
-      credentials: "same-origin"
+      credentials: "same-origin",
     })
       .then(
         (response) => {
@@ -175,26 +202,29 @@ class Signup extends Component {
         }
       )
       .then((data) => {
-        if(data.error) {
-          this.setState({fetchError: data.error})
-        }
-        else if(data.user) {
-          this.setState({currentUser: data.user});
+        if (data.error) {
+          this.setState({ fetchError: data.error });
+        } else if (data.user) {
+          this.setState({ currentUser: data.user });
           localStorage.setItem("user", JSON.stringify(this.state.currentUser));
           alert("Successfully Signed in as User");
-          this.props.history.push("/home");
-        }
-        else if(data.doctor) {
+          window.location.href = "http://localhost:3000/home";
+        } else if (data.doctor) {
           this.setState({ currentUser: data.doctor });
-          localStorage.setItem("doctor", JSON.stringify(this.state.currentUser));
+          localStorage.setItem(
+            "doctor",
+            JSON.stringify(this.state.currentUser)
+          );
           alert("Successfully Signed in as Doctor");
-          this.props.history.push("/home");
+          window.location.href = "http://localhost:3000/home";
         }
       })
       .catch((error) => {
-        this.setState({fetchError: "Sign Up Failed! Please try again in a moment"});
+        this.setState({
+          fetchError: "Sign Up Failed! Please try again in a moment",
+        });
       });
-      event.preventDefault();
+    event.preventDefault();
   }
 
   render() {
