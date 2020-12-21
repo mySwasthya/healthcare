@@ -3,7 +3,7 @@ import Main from './components/MainComponent';
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import history from './history';
-
+import KommunicateChat from './Chat';
 
 
 class App extends Component {
@@ -12,6 +12,7 @@ class App extends Component {
       <BrowserRouter history={history}>
         <div>
           <Main />
+          <KommunicateChat/>
         </div>
       </BrowserRouter>
     );
